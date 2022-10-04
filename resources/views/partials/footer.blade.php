@@ -193,7 +193,7 @@
       </div>
     </div>
   </footer>
-</div>
+
 <!-- ========== CONTACT NOTIFICATION ========== -->
 <div id="contact-notification" class="notification fixed"></div>
 <!-- ========== BACK TO TOP ========== -->

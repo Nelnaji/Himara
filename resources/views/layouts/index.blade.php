@@ -31,14 +31,54 @@
     <!-- ========== GOOGLE FONTS ========== -->
     <link href="https://fonts.googleapis.com/css?family=Oswald:400,500,600,700%7CRoboto:100,300,400,400i,500,700"
       rel="stylesheet">
-    @vite('resources/css/app.css')
+    {{-- @vite('resources/css/app.css') --}}
     <title>Hotel Himara - Hotel HTML Template</title>
+
+      <!-- ========== JAVASCRIPT ========== -->
+      <script src="js/jquery.min.js" defer></script>
+      <script src="http://maps.google.com/maps/api/js?key=YOUR_API_KEY" defer></script>
+      <script src="js/bootstrap.min.js" defer></script>
+      <script src="js/bootstrap-select.min.js" defer></script>
+      <script src="js/jquery.mmenu.js" defer></script>
+      <script src="js/jquery.inview.min.js" defer></script>
+      <script src="js/jquery.countdown.min.js" defer></script>
+      <script src="js/jquery.magnific-popup.min.js" defer></script>
+      <script src="js/owl.carousel.min.js" defer></script>
+      <script src="js/owl.carousel.thumbs.min.js" defer></script>
+      <script src="js/isotope.pkgd.min.js" defer></script>
+      <script src="js/imagesloaded.pkgd.min.js" defer></script>
+      <script src="js/masonry.pkgd.min.js" defer></script>
+      <script src="js/wow.min.js" defer></script>
+      <script src="js/countup.min.js" defer></script>
+      <script src="js/moment.min.js" defer></script>
+      <script src="js/daterangepicker.js" defer></script>
+      <script src="js/parallax.min.js" defer></script>
+      <script src="js/smoothscroll.min.js" defer></script>
+      <script src="js/instafeed.min.js" defer></script>
+      <script src="js/main.js" defer></script>
+      <!-- ========== REVOLUTION SLIDER ========== -->
+      <script src="revolution/js/jquery.themepunch.tools.min.js" defer></script>
+      <script src="revolution/js/jquery.themepunch.revolution.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.actions.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.carousel.min.js"></script>
+      <script src="revolution/js/extensions/revolution.extension.kenburn.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.layeranimation.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.migration.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.navigation.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.parallax.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.slideanims.min.js" defer></script>
+      <script src="revolution/js/extensions/revolution.extension.video.min.js" defer></script>
 </head>
 <body>
-@include('partials.topmenu')
-@include('partials.nav')
+    @include('partials.mobilemenu')
+    <div class="wrapper">
 
-@yield('content')
-@include('partials.footer')
+        @include('partials.topmenu')
+        @include('partials.nav')
+
+        @yield('content')
+
+        @include('partials.footer')
+    </div>
 </body>
 </html>
