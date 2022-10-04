@@ -71,10 +71,10 @@
 </head>
 <body>
     @include('partials.mobilemenu')
-    <div class="wrapper">
 
-        @include('partials.topmenu')
-        @include('partials.nav')
+    @include('partials.topmenu')
+    @include('partials.nav')
+    <div class="wrapper">
 
         @yield('content')
 

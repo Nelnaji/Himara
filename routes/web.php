@@ -21,6 +21,9 @@ Route::get('/gallery', function () {
     return view('pages.gallery');
 });
 
+Route::get('/rooms-list', function () {
+    return view('pages.rooms-list');
+});
 
 
 Route::get('/dashboard', function () {
