@@ -63,7 +63,7 @@
       <x-index.news>
       </x-index.news>
       <!-- ========== VIDEO ========== -->
-      <x-video.news></x-video.news>
+      <x-index.video></x-index.video>
 
       <!-- ========== CONTACT V2 ========== -->
       <x-index.contact>
