@@ -1,4 +1,7 @@
-  <!-- ========== HEADER ========== -->
+
+
+
+<!-- ========== HEADER ========== -->
   <header class="horizontal-header sticky-header" data-menutoggle="991">
     <div class="container">
       <!-- BRAND -->
@@ -47,11 +50,40 @@
               </li>
             </ul>
           </li>
-          <li class="menu-item menu-btn">
-            <a href="booking-form.html" class="btn">
+          <li class="menu-item menu-btn dropdown">
+
+
+            @if (Route::has('login'))
+
+                @auth
+
+
+                    <a href="{{ url('/dashboard') }}" class="btn">{{ Auth::user()->name }}</a>
+                    <ul class="submenu">
+                        <li class="menu-item">
+                          <a href="style-guide.html">Profile</a>
+                        </li>
+
+                        <li class="menu-item">
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+
+                            <a :href="route('logout')"
+                                    onclick="event.preventDefault();
+                                                this.closest('form').submit();">
+                                {{ __('Log Out') }}
+                        </a>
+                        </form>
+                    </li>
+                      
+                      </ul>
+                @else
+            <a href="{{ route('login') }}" class="btn">
               <i class="fa fa-user"></i>
-              LOG IN</a
-            >
+              LOG IN</a>
+            @endauth
+            </div>
+            @endif
           </li>
         </ul>
       </nav>
