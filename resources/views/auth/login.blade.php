@@ -1,9 +1,9 @@
 <x-guest-layout>
     <x-auth-card>
         <x-slot name="logo">
-            <a href="/">
-                <x-application-logo class="w-20 h-20 fill-current text-gray-500" />
-            </a>
+            <a href="{{ route('welcome') }}">
+                <img src="images/logo.svg" alt="Hotel Himara" />
+              </a>
         </x-slot>
 
         <!-- Session Status -->
@@ -51,7 +51,16 @@
                 <x-primary-button class="ml-3">
                     {{ __('Log in') }}
                 </x-primary-button>
+
+
             </div>
+            <p>
+                No account?
+
+                <a href="{{ route('register') }}">
+                    Register Now.
+                </a>
+            </p>
         </form>
     </x-auth-card>
 </x-guest-layout>

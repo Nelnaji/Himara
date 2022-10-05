@@ -379,7 +379,7 @@
                       </div>
                       <div class="guests-buttons">
                         <label
-                          >Cildren
+                          >Children
                           <a
                             href="#"
                             title=""
@@ -408,7 +408,12 @@
                 </div>
               </div>
               <!-- BOOKING BUTTON -->
-              <div class="col-md-2">
+
+            @if (Route::has('login'))
+
+            @auth
+            <div class="col-md-2">
+
                 <button type="submit" class="btn btn-book">
                   BOOK A ROOM
                 </button>
@@ -416,6 +421,20 @@
                   <a href="booking-form.html"> Advanced Booking Form </a>
                 </div>
               </div>
+            @else
+            <div class="col-md-2">
+    <a href="{{ route('login') }}" class="btn btn-book">
+        <i class="fa fa-user"></i>
+        LOG IN</a>
+
+    <div class="advanced-form-link">
+        <a href="{{ route('register') }}">Register an account</a>
+      </div>
+              </div>
+        @endauth
+        </div>
+        @endif
+
             </div>
           </form>
         </div>

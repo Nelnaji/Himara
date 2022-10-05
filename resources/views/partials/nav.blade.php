@@ -58,24 +58,24 @@
                 @auth
 
 
-                    <a href="{{ url('/dashboard') }}" class="btn">{{ Auth::user()->name }}</a>
+                    <span class="btn">{{ Auth::user()->name }}</span>
                     <ul class="submenu">
                         <li class="menu-item">
-                          <a href="style-guide.html">Profile</a>
+                          <a href="{{ route('dashboard') }}">Profile</a>
                         </li>
 
                         <li class="menu-item">
                         <form method="POST" action="{{ route('logout') }}">
                             @csrf
 
-                            <a :href="route('logout')"
+                            <a href="route('logout')"
                                     onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                 {{ __('Log Out') }}
                         </a>
                         </form>
                     </li>
-                      
+
                       </ul>
                 @else
             <a href="{{ route('login') }}" class="btn">
