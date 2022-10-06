@@ -68,6 +68,7 @@
       <script src="revolution/js/extensions/revolution.extension.parallax.min.js" defer></script>
       <script src="revolution/js/extensions/revolution.extension.slideanims.min.js" defer></script>
       <script src="revolution/js/extensions/revolution.extension.video.min.js" defer></script>
+
 </head>
 <body>
     @include('partials.mobilemenu')

@@ -13,24 +13,25 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
+
     </head>
-    <body class="font-sans antialiased">
-        <div class="min-h-screen bg-gray-100">
-            @include('layouts.navigation')
+    <body >
 
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+        @include('layouts.navigation')
+        <div class="flex overflow-hidden bg-white pt-16">
 
-            <!-- Page Content -->
+         @include('layouts.sidebar')
+
+          <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
             <main>
-                {{ $slot }}
+             @yield('backContent')
+
+                <p>Un peu de lorem pour montrer comment le contenu s'aggence</p>
             </main>
+              </div>
+
         </div>
+
+        <script src="js/sidebar.js"></script>
     </body>
 </html>
