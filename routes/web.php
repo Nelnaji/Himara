@@ -25,6 +25,11 @@ Route::get('/rooms-list', function () {
     return view('pages.rooms-list');
 });
 
+Route::get('/testicule', function () {
+    return view('back.pages.users');
+});
+
+
 
 Route::get('/dashboard', function () {
     return view('dashboard');

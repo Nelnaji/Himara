@@ -93,7 +93,7 @@
         class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
       >
       {{-- This will have to change based on the pages name --}}
-        <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"  href="#" >Dashboard</a>
+        <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4">
           <form
             class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
           >
@@ -135,18 +135,10 @@
               class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
               id="user-dropdown"
             >
-              <a
+             <a
                 href="#pablo"
                 class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Another action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Something else here</a
+                >Profile</a
               >
               <div
                 class="h-0 my-2 border border-solid border-blueGray-100"
@@ -154,7 +146,7 @@
               <a
                 href="#pablo"
                 class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Seprated link</a
+                >Log Out</a
               >
             </div>
           </ul>
