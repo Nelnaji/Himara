@@ -57,9 +57,14 @@
 
                 @auth
 
+                <span href="{{ route('login') }}" class="btn">
 
-                    <span class="btn">{{ Auth::user()->name }}</span>
-                    <ul class="submenu">
+                    {{ Auth::user()->name }}  <img
+                    alt="..."
+class="index__profile-picture rounded-circle"
+                    src="images/users/admin.jpg"
+                /></span>
+                                    <ul class="submenu">
                         <li class="menu-item">
                           <a href="{{ route('dashboard') }}">Profile</a>
                         </li>

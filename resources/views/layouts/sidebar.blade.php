@@ -12,44 +12,12 @@
           <i class="fas fa-bars"></i>
         </button>
         <div class="logo">
-            <a href="index.html">
+            <a href="{{ route('welcome') }}">
               <img src="images/logo.svg" alt="Hotel Himara" />
             </a>
-        <ul class="md:hidden items-center flex flex-wrap list-none">
-          <li class="inline-block relative">
-            <a
-              class="text-blueGray-500 block py-1 px-3"
-              href="#pablo"
-              onclick="openDropdown(event,'notification-dropdown')"
-              ><i class="fas fa-bell"></i
-            ></a>
-            <div
-              class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
-              id="notification-dropdown"
-            >
-              <a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Another action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Something else here</a
-              >
-              <div
-                class="h-0 my-2 border border-solid border-blueGray-100"
-              ></div>
-              <a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Seprated link</a
-              >
             </div>
-          </li>
+        <ul class="md:hidden items-center flex flex-wrap list-none">
+
           <li class="inline-block relative">
             <a
               class="text-blueGray-500 block"
@@ -58,12 +26,16 @@
               ><div class="items-center flex">
                 <span
                   class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
-                  ><img
+                  >
+
+                  {{-- Picture profile responsive --}}
+                  <img
                     alt="..."
                     class="w-full rounded-full align-middle border-none shadow-lg"
-                    src="../../assets/img/team-1-800x800.jpg"
+                    src="images/users/admin.jpg"
                 /></span></div
             ></a>
+
             <div
               class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
               id="user-responsive-dropdown"
@@ -71,15 +43,7 @@
               <a
                 href="#pablo"
                 class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Another action</a
-              ><a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Something else here</a
+                >Profile</a
               >
               <div
                 class="h-0 my-2 border border-solid border-blueGray-100"
@@ -87,7 +51,7 @@
               <a
                 href="#pablo"
                 class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Seprated link</a
+                >Log Out</a
               >
             </div>
           </li>
@@ -101,12 +65,11 @@
           >
             <div class="flex flex-wrap">
               <div class="w-6/12">
-                <a
-                  class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
-                  href="../../index.html"
-                >
-                  Notus Tailwind JS
-                </a>
+                <div class="logo">
+                    <a href="index.html">
+                      <img src="images/logo.svg" alt="Hotel Himara" />
+                    </a>
+                    </div>
               </div>
               <div class="w-6/12 flex justify-end">
                 <button
@@ -142,7 +105,7 @@
             <li class="items-center">
               <a
                 href="./dashboard.html"
-                class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
+                class="text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
               >
                 <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
                 Dashboard
@@ -152,7 +115,7 @@
             <li class="items-center">
               <a
                 href="./settings.html"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
                 Settings
@@ -162,7 +125,7 @@
             <li class="items-center">
               <a
                 href="./tables.html"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
                 Tables
@@ -172,7 +135,7 @@
             <li class="items-center">
               <a
                 href="./maps.html"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i
                   class="fas fa-map-marked mr-2 text-sm text-blueGray-300"
@@ -198,7 +161,7 @@
             <li class="items-center">
               <a
                 href="../auth/login.html"
-                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
               >
                 <i
                   class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"
@@ -210,7 +173,7 @@
             <li class="items-center">
               <a
                 href="../auth/register.html"
-                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
               >
                 <i
                   class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
@@ -236,7 +199,7 @@
             <li class="items-center">
               <a
                 href="../landing.html"
-                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
               >
                 <i
                   class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"
@@ -248,7 +211,7 @@
             <li class="items-center">
               <a
                 href="../profile.html"
-                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
               >
                 <i
                   class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"
@@ -274,7 +237,7 @@
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/js/colors/notus"
                 target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+                class="text-blueGray-700 hover:text-currentGold text-sm block mb-4 no-underline font-semibold"
               >
                 <i
                   class="fas fa-paint-brush mr-2 text-blueGray-300 text-base"
@@ -283,88 +246,7 @@
               </a>
             </li>
 
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i
-                  class="fab fa-css3-alt mr-2 text-blueGray-300 text-base"
-                ></i>
-                CSS Components
-              </a>
-            </li>
 
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i
-                  class="fab fa-angular mr-2 text-blueGray-300 text-base"
-                ></i>
-                Angular
-              </a>
-            </li>
-
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i
-                  class="fab fa-js-square mr-2 text-blueGray-300 text-base"
-                ></i>
-                Javascript
-              </a>
-            </li>
-
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i class="fab fa-react mr-2 text-blueGray-300 text-base"></i>
-                NextJS
-              </a>
-            </li>
-
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i class="fab fa-react mr-2 text-blueGray-300 text-base"></i>
-                React
-              </a>
-            </li>
-
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i class="fas fa-link mr-2 text-blueGray-300 text-base"></i>
-                Svelte
-              </a>
-            </li>
-
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
-              >
-                <i class="fab fa-vuejs mr-2 text-blueGray-300 text-base"></i>
-                VueJS
-              </a>
-            </li>
           </ul>
         </div>
       </div>

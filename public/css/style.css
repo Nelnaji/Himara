@@ -7726,3 +7726,7 @@ section.places-item {
     display: block;
     margin-bottom: 20px;
 }
+
+.index__profile-picture {
+    width: 1.4rem;
+}
