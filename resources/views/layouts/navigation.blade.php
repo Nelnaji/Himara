@@ -86,37 +86,75 @@
 </nav> --}}
 
 
-<nav class="bg-white border-b border-gray-200 fixed z-30 w-full">
-    <div class="px-3 py-3 lg:px-5 lg:pl-3">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center justify-start">
-          <button id="toggleSidebarMobile" aria-expanded="true" aria-controls="sidebar" class="lg:hidden mr-2 text-gray-600 hover:text-gray-900 cursor-pointer p-2 hover:bg-gray-100 focus:bg-gray-100 focus:ring-2 focus:ring-gray-100 rounded">
-            <svg id="toggleSidebarMobileHamburger" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h6a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
-            <svg id="toggleSidebarMobileClose" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
-          </button>
-          <a href="{{ route('welcome') }}" class="text-xl font-bold flex items-center lg:ml-2.5">
-            <img src="/images/logo.svg" class="h-6 mr-2" alt="Himara Logo">
 
-          </a>
-          <form action="#" method="GET" class="hidden lg:block lg:pl-32">
-            <label for="topbar-search" class="sr-only">Search</label>
-            <div class="mt-1 relative lg:w-64">
-              <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
-              </div>
-              <input type="text" name="email" id="topbar-search" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-cyan-600 focus:border-cyan-600 block w-full pl-10 p-2.5" placeholder="Search">
+
+
+      <nav
+        class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
+      >
+      {{-- This will have to change based on the pages name --}}
+        <div class="w-full mx-autp items-center flex justify-between md:flex-nowrap flex-wrap md:px-10 px-4"  href="./index.html" >Dashboard</a>
+          <form
+            class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
+          >
+            <div class="relative flex w-full flex-wrap items-stretch">
+              <span
+                class="z-10 h-full leading-snug font-normal absolute text-center text-blueGray-300 absolute bg-transparent rounded text-base items-center justify-center w-8 pl-3 py-3"
+                ><i class="fas fa-search"></i
+              ></span>
+              <input
+                type="text"
+                placeholder="Search here..."
+                class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 relative bg-white bg-white rounded text-sm shadow outline-none focus:outline-none focus:ring w-full pl-10"
+              />
             </div>
           </form>
-        </div>
-        <div class="flex items-center">
-            <!-- Search mobile -->
-
-            <a href="#" class="hidden sm:inline-flex ml-5 text-white bg-cyan-600 hover:bg-cyan-700 focus:ring-4 focus:ring-cyan-200 font-medium rounded-lg text-sm px-5 py-2.5 text-center items-center mr-3">
-                <svg class="svg-inline--fa fa-gem -ml-1 mr-2 h-4 w-4" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gem" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M378.7 32H133.3L256 182.7L378.7 32zM512 192l-107.4-141.3L289.6 192H512zM107.4 50.67L0 192h222.4L107.4 50.67zM244.3 474.9C247.3 478.2 251.6 480 256 480s8.653-1.828 11.67-5.062L510.6 224H1.365L244.3 474.9z"></path></svg>
-                Upgrade to Pro
+          <ul
+            class="flex-col md:flex-row list-none items-center hidden md:flex"
+          >
+            <a
+              class="text-blueGray-500 block"
+              href="#pablo"
+              onclick="openDropdown(event,'user-dropdown')"
+            >
+              <div class="items-center flex">
+                <span
+                  class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
+                  ><img
+                    alt="..."
+                    class="w-full rounded-full align-middle border-none shadow-lg"
+                    src="../../assets/img/team-1-800x800.jpg"
+                /></span>
+              </div>
             </a>
-          </div>
-      </div>
-    </div>
-  </nav>
+            <div
+              class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+              id="user-dropdown"
+            >
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Another action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Something else here</a
+              >
+              <div
+                class="h-0 my-2 border border-solid border-blueGray-100"
+              ></div>
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Seprated link</a
+              >
+            </div>
+          </ul>
+        </div>
+      </nav>
+
 

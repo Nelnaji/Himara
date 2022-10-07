@@ -1,85 +1,371 @@
-<aside id="sidebar" class="fixed hidden z-20 h-full top-0 left-0 pt-16 flex lg:flex flex-shrink-0 flex-col w-64 transition-width duration-75" aria-label="Sidebar">
-    <div class="relative flex-1 flex flex-col min-h-0 border-r border-gray-200 bg-white pt-0">
-      <div class="flex-1 flex flex-col pt-5 pb-4 overflow-y-auto">
-        <div class="flex-1 px-3 bg-white divide-y space-y-1">
-          <ul class="space-y-2 pb-2">
-            <li>
-              <form action="#" method="GET" class="lg:hidden">
-                <label for="mobile-search" class="sr-only">Search</label>
-                <div class="relative">
-                  <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
-                    <svg class="w-5 h-5 text-gray-500" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                  </div>
-                  <input type="text" name="email" id="mobile-search" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-cyan-600 focus:ring-cyan-600 block w-full pl-10 p-2.5" placeholder="Search">
-                </div>
-              </form>
-            </li>
-            <li>
-              <a href="#" class="text-base text-gray-900 font-normal rounded-lg flex items-center p-2 hover:bg-gray-100 group">
-                  <svg class="w-6 h-6 text-gray-500 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path><path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path></svg>
-                  <span class="ml-3">Dashboard</span>
+
+    <nav class="md:left-0 md:block md:fixed md:top-0 md:bottom-0 md:overflow-y-auto md:flex-row md:flex-nowrap md:overflow-hidden shadow-xl bg-white flex flex-wrap items-center justify-between relative md:w-64 z-10 py-4 px-6"
+    >
+      <div
+        class="md:flex-col md:items-stretch md:min-h-full md:flex-nowrap px-0 flex flex-wrap items-center justify-between w-full mx-auto"
+      >
+        <button
+          class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+          type="button"
+          onclick="toggleNavbar('example-collapse-sidebar')"
+        >
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="logo">
+            <a href="index.html">
+              <img src="images/logo.svg" alt="Hotel Himara" />
+            </a>
+        <ul class="md:hidden items-center flex flex-wrap list-none">
+          <li class="inline-block relative">
+            <a
+              class="text-blueGray-500 block py-1 px-3"
+              href="#pablo"
+              onclick="openDropdown(event,'notification-dropdown')"
+              ><i class="fas fa-bell"></i
+            ></a>
+            <div
+              class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+              id="notification-dropdown"
+            >
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Another action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Something else here</a
+              >
+              <div
+                class="h-0 my-2 border border-solid border-blueGray-100"
+              ></div>
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Seprated link</a
+              >
+            </div>
+          </li>
+          <li class="inline-block relative">
+            <a
+              class="text-blueGray-500 block"
+              href="#pablo"
+              onclick="openDropdown(event,'user-responsive-dropdown')"
+              ><div class="items-center flex">
+                <span
+                  class="w-12 h-12 text-sm text-white bg-blueGray-200 inline-flex items-center justify-center rounded-full"
+                  ><img
+                    alt="..."
+                    class="w-full rounded-full align-middle border-none shadow-lg"
+                    src="../../assets/img/team-1-800x800.jpg"
+                /></span></div
+            ></a>
+            <div
+              class="hidden bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
+              id="user-responsive-dropdown"
+            >
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Another action</a
+              ><a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Something else here</a
+              >
+              <div
+                class="h-0 my-2 border border-solid border-blueGray-100"
+              ></div>
+              <a
+                href="#pablo"
+                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
+                >Seprated link</a
+              >
+            </div>
+          </li>
+        </ul>
+        <div
+          class="md:flex md:flex-col md:items-stretch md:opacity-100 md:relative md:mt-4 md:shadow-none shadow absolute top-0 left-0 right-0 z-40 overflow-y-auto overflow-x-hidden h-auto items-center flex-1 rounded hidden"
+          id="example-collapse-sidebar"
+        >
+          <div
+            class="md:min-w-full md:hidden block pb-4 mb-4 border-b border-solid border-blueGray-200"
+          >
+            <div class="flex flex-wrap">
+              <div class="w-6/12">
+                <a
+                  class="md:block text-left md:pb-2 text-blueGray-600 mr-0 inline-block whitespace-nowrap text-sm uppercase font-bold p-4 px-0"
+                  href="../../index.html"
+                >
+                  Notus Tailwind JS
+                </a>
+              </div>
+              <div class="w-6/12 flex justify-end">
+                <button
+                  type="button"
+                  class="cursor-pointer text-black opacity-50 md:hidden px-3 py-1 text-xl leading-none bg-transparent rounded border border-solid border-transparent"
+                  onclick="toggleNavbar('example-collapse-sidebar')"
+                >
+                  <i class="fas fa-times"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <form class="mt-6 mb-4 md:hidden">
+            <div class="mb-3 pt-0">
+              <input
+                type="text"
+                placeholder="Search"
+                class="border-0 px-3 py-2 h-12 border border-solid border-blueGray-500 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-base leading-snug shadow-none outline-none focus:outline-none w-full font-normal"
+              />
+            </div>
+          </form>
+          <!-- Divider -->
+          <hr class="my-4 md:min-w-full" />
+          <!-- Heading -->
+          <h6
+            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+          >
+            Admin Layout Pages
+          </h6>
+          <!-- Navigation -->
+
+          <ul class="md:flex-col md:min-w-full flex flex-col list-none">
+            <li class="items-center">
+              <a
+                href="./dashboard.html"
+                class="text-xs uppercase py-3 font-bold block text-pink-500 hover:text-pink-600"
+              >
+                <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
+                Dashboard
               </a>
             </li>
-            <li>
-              <a href="https://demo.themesberg.com/windster-pro/kanban/" target="_blank" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 groupbg-gray-100 ">
-                  <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M5 3a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2V5a2 2 0 00-2-2H5zM5 11a2 2 0 00-2 2v2a2 2 0 002 2h2a2 2 0 002-2v-2a2 2 0 00-2-2H5zM11 5a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V5zM11 13a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
-                  <span class="ml-3 flex-1 whitespace-nowrap">Kanban</span>
-                  <span class="bg-gray-200 text-gray-800 ml-3 text-sm font-medium inline-flex items-center justify-center px-2 rounded-full">Pro</span>
+
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+              >
+                <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
+                Settings
               </a>
             </li>
-            <li>
-              <a href="https://demo.themesberg.com/windster-pro/mailing/inbox/" target="_blank" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group bg-gray-100">
-                  <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M8.707 7.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l2-2a1 1 0 00-1.414-1.414L11 7.586V3a1 1 0 10-2 0v4.586l-.293-.293z"></path><path d="M3 5a2 2 0 012-2h1a1 1 0 010 2H5v7h2l1 2h4l1-2h2V5h-1a1 1 0 110-2h1a2 2 0 012 2v10a2 2 0 01-2 2H5a2 2 0 01-2-2V5z"></path></svg>
-                  <span class="ml-3 flex-1 whitespace-nowrap">Inbox</span>
-                  <span class="bg-gray-200 text-gray-800 ml-3 text-sm font-medium inline-flex items-center justify-center px-2 rounded-full">Pro</span>
+
+            <li class="items-center">
+              <a
+                href="./tables.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+              >
+                <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
+                Tables
               </a>
             </li>
-            <li>
-              <a href="#" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group  bg-gray-100">
-                <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"></path></svg>
-                <span class="ml-3 flex-1 whitespace-nowrap">Users</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group  bg-gray-100 ">
-                <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M10 2a4 4 0 00-4 4v1H5a1 1 0 00-.994.89l-1 9A1 1 0 004 18h12a1 1 0 00.994-1.11l-1-9A1 1 0 0015 7h-1V6a4 4 0 00-4-4zm2 5V6a2 2 0 10-4 0v1h4zm-6 3a1 1 0 112 0 1 1 0 01-2 0zm7-1a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"></path></svg>
-                <span class="ml-3 flex-1 whitespace-nowrap">Products</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group  bg-gray-100">
-                <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 3a1 1 0 00-1 1v12a1 1 0 102 0V4a1 1 0 00-1-1zm10.293 9.293a1 1 0 001.414 1.414l3-3a1 1 0 000-1.414l-3-3a1 1 0 10-1.414 1.414L14.586 9H7a1 1 0 100 2h7.586l-1.293 1.293z" clip-rule="evenodd"></path></svg>
-                <span class="ml-3 flex-1 whitespace-nowrap">Sign In</span>
-              </a>
-            </li>
-            <li>
-              <a href="#" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 flex items-center p-2 group bg-gray-100 ">
-                <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5 4a3 3 0 00-3 3v6a3 3 0 003 3h10a3 3 0 003-3V7a3 3 0 00-3-3H5zm-1 9v-1h5v2H5a1 1 0 01-1-1zm7 1h4a1 1 0 001-1v-1h-5v2zm0-4h5V8h-5v2zM9 8H4v2h5V8z" clip-rule="evenodd"></path></svg>
-                <span class="ml-3 flex-1 whitespace-nowrap">Sign Up</span>
+
+            <li class="items-center">
+              <a
+                href="./maps.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-blueGray-500"
+              >
+                <i
+                  class="fas fa-map-marked mr-2 text-sm text-blueGray-300"
+                ></i>
+                Maps
               </a>
             </li>
           </ul>
-          <div class="space-y-2 pt-2">
-            <a href="#" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group transition duration-75 flex items-center p-2">
-              <svg class="w-5 h-5 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" aria-hidden="true" focusable="false" data-prefix="fas" data-icon="gem" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M378.7 32H133.3L256 182.7L378.7 32zM512 192l-107.4-141.3L289.6 192H512zM107.4 50.67L0 192h222.4L107.4 50.67zM244.3 474.9C247.3 478.2 251.6 480 256 480s8.653-1.828 11.67-5.062L510.6 224H1.365L244.3 474.9z"></path></svg>
-              <span class="ml-4">Upgrade to Pro</span>
-            </a>
-            <a href="https://flowbite.com/docs/getting-started/introduction/" target="_blank" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group transition duration-75 flex items-center p-2">
-              <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"></path><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"></path></svg>
-              <span class="ml-3">Documentation</span>
-            </a>
-            <a href="https://flowbite.com/docs/components/alerts/" target="_blank" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group transition duration-75 flex items-center p-2">
-              <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path d="M7 3a1 1 0 000 2h6a1 1 0 100-2H7zM4 7a1 1 0 011-1h10a1 1 0 110 2H5a1 1 0 01-1-1zM2 11a2 2 0 012-2h12a2 2 0 012 2v4a2 2 0 01-2 2H4a2 2 0 01-2-2v-4z"></path></svg>
-              <span class="ml-3">Components</span>
-            </a>
-            <a href="https://github.com/themesberg/windster-tailwind-css-dashboard/issues" target="_blank" class="text-base text-gray-900 font-normal rounded-lg hover:bg-gray-100 group transition duration-75 flex items-center p-2">
-              <svg class="w-6 h-6 text-gray-500 flex-shrink-0 group-hover:text-gray-900 transition duration-75" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M18 10a8 8 0 11-16 0 8 8 0 0116 0zm-2 0c0 .993-.241 1.929-.668 2.754l-1.524-1.525a3.997 3.997 0 00.078-2.183l1.562-1.562C15.802 8.249 16 9.1 16 10zm-5.165 3.913l1.58 1.58A5.98 5.98 0 0110 16a5.976 5.976 0 01-2.516-.552l1.562-1.562a4.006 4.006 0 001.789.027zm-4.677-2.796a4.002 4.002 0 01-.041-2.08l-.08.08-1.53-1.533A5.98 5.98 0 004 10c0 .954.223 1.856.619 2.657l1.54-1.54zm1.088-6.45A5.974 5.974 0 0110 4c.954 0 1.856.223 2.657.619l-1.54 1.54a4.002 4.002 0 00-2.346.033L7.246 4.668zM12 10a2 2 0 11-4 0 2 2 0 014 0z" clip-rule="evenodd"></path></svg>
-              <span class="ml-3">Help</span>
-            </a>
-          </div>
+
+          <!-- Divider -->
+          <hr class="my-4 md:min-w-full" />
+          <!-- Heading -->
+          <h6
+            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+          >
+            Auth Layout Pages
+          </h6>
+          <!-- Navigation -->
+
+          <ul
+            class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
+          >
+            <li class="items-center">
+              <a
+                href="../auth/login.html"
+                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+              >
+                <i
+                  class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"
+                ></i>
+                Login
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a
+                href="../auth/register.html"
+                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+              >
+                <i
+                  class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
+                ></i>
+                Register
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <hr class="my-4 md:min-w-full" />
+          <!-- Heading -->
+          <h6
+            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+          >
+            No Layout Pages
+          </h6>
+          <!-- Navigation -->
+
+          <ul
+            class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
+          >
+            <li class="items-center">
+              <a
+                href="../landing.html"
+                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+              >
+                <i
+                  class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"
+                ></i>
+                Landing Page
+              </a>
+            </li>
+
+            <li class="items-center">
+              <a
+                href="../profile.html"
+                class="text-blueGray-700 hover:text-blueGray-500 text-xs uppercase py-3 font-bold block"
+              >
+                <i
+                  class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"
+                ></i>
+                Profile Page
+              </a>
+            </li>
+          </ul>
+
+          <!-- Divider -->
+          <hr class="my-4 md:min-w-full" />
+          <!-- Heading -->
+          <h6
+            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+          >
+            Documentation
+          </h6>
+          <!-- Navigation -->
+          <ul
+            class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
+          >
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/js/colors/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i
+                  class="fas fa-paint-brush mr-2 text-blueGray-300 text-base"
+                ></i>
+                Styles
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/js/alerts/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i
+                  class="fab fa-css3-alt mr-2 text-blueGray-300 text-base"
+                ></i>
+                CSS Components
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/angular/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i
+                  class="fab fa-angular mr-2 text-blueGray-300 text-base"
+                ></i>
+                Angular
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/js/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i
+                  class="fab fa-js-square mr-2 text-blueGray-300 text-base"
+                ></i>
+                Javascript
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i class="fab fa-react mr-2 text-blueGray-300 text-base"></i>
+                NextJS
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/react/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i class="fab fa-react mr-2 text-blueGray-300 text-base"></i>
+                React
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/svelte/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i class="fas fa-link mr-2 text-blueGray-300 text-base"></i>
+                Svelte
+              </a>
+            </li>
+
+            <li class="inline-flex">
+              <a
+                href="https://www.creative-tim.com/learning-lab/tailwind/vue/overview/notus"
+                target="_blank"
+                class="text-blueGray-700 hover:text-blueGray-500 text-sm block mb-4 no-underline font-semibold"
+              >
+                <i class="fab fa-vuejs mr-2 text-blueGray-300 text-base"></i>
+                VueJS
+              </a>
+            </li>
+          </ul>
         </div>
       </div>
-    </div>
-  </aside>
-
-  <div class="bg-gray-900 opacity-50 hidden fixed inset-0 z-10" id="sidebarBackdrop"></div>
+    </nav>

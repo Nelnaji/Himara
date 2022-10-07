@@ -13,25 +13,22 @@
 
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
-
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.js" defer></script>
+        <script src="js/sidebar.js" defer></script>
     </head>
     <body >
-
+        <div id="root">
+        @include('layouts.sidebar')
+            <div class="relative md:ml-64 bg-blueGray-50">
         @include('layouts.navigation')
-        <div class="flex overflow-hidden bg-white pt-16">
+            </div>
 
-         @include('layouts.sidebar')
-
-          <div id="main-content" class="h-full w-full bg-gray-50 relative overflow-y-auto lg:ml-64">
-            <main>
-             @yield('backContent')
-
-                <p>Un peu de lorem pour montrer comment le contenu s'aggence</p>
+           <main>
+        @yield('backContent')
             </main>
-              </div>
+
 
         </div>
 
-        <script src="js/sidebar.js"></script>
     </body>
 </html>
