@@ -24,9 +24,10 @@
 
 
 
+            <main class="mt-8 ml-10 mr-4 md:mt-24 md:ml-72">
 
-
-            @yield('backContent')
+                @yield('backContent')
+            </main>
         </div>
 
     </body>

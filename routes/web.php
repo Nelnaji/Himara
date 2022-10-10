@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\NavController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,17 +18,13 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/gallery', function () {
-    return view('pages.gallery');
-});
-
-Route::get('/rooms-list', function () {
-    return view('pages.rooms-list');
-});
-
-Route::get('/testicule', function () {
+Route::get('/users', function () {
     return view('back.pages.users');
 });
+
+Route::get('/nav', function () {
+    return view('back.pages.nav');
+})->name('back.nav');
 
 
 
@@ -36,3 +33,5 @@ Route::get('/dashboard', function () {
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 require __DIR__.'/auth.php';
+
+// Route::resource('nav', NavController::class);
