@@ -48,11 +48,15 @@
               <div
                 class="h-0 my-2 border border-solid border-blueGray-100"
               ></div>
-              <a
-                href="#pablo"
-                class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                >Log Out</a
-              >
+              <form method="POST" action="{{ route('logout') }}">
+                @csrf
+
+                <a class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700" href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();"></i>
+                    {{ __('Log Out') }}
+            </a>
+            </form>
             </div>
           </li>
         </ul>
@@ -66,7 +70,7 @@
             <div class="flex flex-wrap">
               <div class="w-6/12">
                 <div class="logo">
-                    <a href="index.html">
+                    <a href="{{ route('welcome') }}">
                       <img src="images/logo.svg" alt="Hotel Himara" />
                     </a>
                     </div>
@@ -97,7 +101,7 @@
           <h6
             class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
           >
-            Admin Layout Pages
+            Admin Layout Sections
           </h6>
           <!-- Navigation -->
 
@@ -107,42 +111,121 @@
                 href="./dashboard.html"
                 class="text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
               >
-                <i class="fas fa-tv mr-2 text-sm opacity-75"></i>
-                Dashboard
+                <i class="fas fa-solid fa-users-gear mr-2 text-sm opacity-75"></i>
+                User List
               </a>
             </li>
+
 
             <li class="items-center">
               <a
                 href="./settings.html"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
+                <i class="fas fa-solid fa-bars mr-2 text-sm text-blueGray-300"></i>
+               Navbar
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-city mr-2 text-sm text-blueGray-300"></i>
+                Rooms
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-sliders mr-2 text-sm text-blueGray-300"></i>
+                Slider
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-images mr-2 text-sm text-blueGray-300"></i>
+                Gallery
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-blender-phone mr-2 text-sm text-blueGray-300"></i>
+             Services
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-people-group mr-2 text-sm text-blueGray-300"></i>
+                Staff
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-circle-info mr-2 text-sm text-blueGray-300"></i>
+               About
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-quote-left mr-2 text-sm text-blueGray-300"></i>
+                Testimonials
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-utensils mr-2 text-sm text-blueGray-300"></i>
+                Restaurant
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
-                Settings
+                news
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-solid fa-video mr-2 text-sm text-blueGray-300"></i>
+                video
+              </a>
+            </li>
+            <li class="items-center">
+              <a
+                href="./settings.html"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+              >
+                <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
+                footer
               </a>
             </li>
 
-            <li class="items-center">
-              <a
-                href="./tables.html"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
-              >
-                <i class="fas fa-table mr-2 text-sm text-blueGray-300"></i>
-                Tables
-              </a>
-            </li>
-
-            <li class="items-center">
-              <a
-                href="./maps.html"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
-              >
-                <i
-                  class="fas fa-map-marked mr-2 text-sm text-blueGray-300"
-                ></i>
-                Maps
-              </a>
-            </li>
           </ul>
 
           <!-- Divider -->
@@ -227,25 +310,44 @@
           <h6
             class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
           >
-            Documentation
+            Personal Pages
           </h6>
           <!-- Navigation -->
           <ul
             class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
           >
-            <li class="inline-flex">
-              <a
-                href="https://www.creative-tim.com/learning-lab/tailwind/js/colors/notus"
-                target="_blank"
-                class="text-blueGray-700 hover:text-currentGold text-sm block mb-4 no-underline font-semibold"
-              >
-                <i
-                  class="fas fa-paint-brush mr-2 text-blueGray-300 text-base"
-                ></i>
-                Styles
-              </a>
-            </li>
+          <li class="items-center">
+            <a
+              href="./settings.html"
+              class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+            >
+              <i class="fas fa-light fa-user mr-2 text-sm text-blueGray-300"></i>
+              Profile
+            </a>
+          </li>
+          <li class="items-center">
+            <a
+              href="./settings.html"
+              class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+            >
+              <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
+              Settings
+            </a>
+          </li>
+          <li class="items-center">
+            <form method="POST" action="{{ route('logout') }}">
+                @csrf
 
+                <a class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block" href="route('logout')"
+                        onclick="event.preventDefault();
+                                    this.closest('form').submit();"><i
+                class="fas fa-solid fa-power-off text-blueGray-300 mr-2 text-sm"
+              ></i>
+                    {{ __('Log Out') }}
+            </a>
+            </form>
+
+          </li>
 
           </ul>
         </div>

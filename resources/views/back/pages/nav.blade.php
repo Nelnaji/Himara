@@ -1,16 +1,5 @@
 @extends('layouts.app')
 @section('backContent')
 
-<p>
-test <br>
-test <br>
-test <br>
-test <br>
-test <br>
-test <br>
-test <br>
-test <br>
-test <br>
-Navigation category.
-</p>
+<h1>Crud for the navbar</h1>
 @endsection
