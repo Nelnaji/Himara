@@ -93,9 +93,9 @@
         class="absolute top-0 left-0 w-full z-10 bg-transparent md:flex-row md:flex-nowrap md:justify-start flex items-center p-4"
       >
       {{-- This will have to change based on the pages name --}}
-        <div class="w-full mx-auto items-center flex justify-between md:flex-nowrap flex-wrap md:pl-80 px-4">
+        <div class="w-full mx-auto items-center flex justify-between md:flex-nowrap flex-wrap md:pl-10 px-4">
           <form
-            class="md:flex hidden flex-row flex-wrap items-center lg:ml-auto mr-3"
+            class="md:flex hidden flex-row flex-wrap items-center ml-auto mr-3"
           >
             <div class="relative flex w-full flex-wrap items-stretch">
               <span
