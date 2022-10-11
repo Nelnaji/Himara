@@ -13,9 +13,13 @@ class NavController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
     public function index()
     {
-        //
+
+        $nav = Nav::all();
+        return view('back.nav.index', compact('nav'));
     }
 
     /**

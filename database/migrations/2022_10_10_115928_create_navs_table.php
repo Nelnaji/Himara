@@ -15,6 +15,8 @@ return new class extends Migration
     {
         Schema::create('navs', function (Blueprint $table) {
             $table->id();
+            $table->string('name', 40);
+            $table->text('src');
             $table->timestamps();
         });
     }

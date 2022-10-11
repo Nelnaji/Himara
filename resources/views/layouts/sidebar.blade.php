@@ -119,7 +119,7 @@
 
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('nav.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-bars mr-2 text-sm text-blueGray-300"></i>

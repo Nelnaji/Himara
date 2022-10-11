@@ -18,14 +18,6 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
-Route::get('/users', function () {
-    return view('back.pages.users');
-});
-
-Route::get('/nav', function () {
-    return view('back.pages.nav');
-})->name('back.nav');
-
 
 
 Route::get('/dashboard', function () {
@@ -34,4 +26,4 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-// Route::resource('nav', NavController::class);
+Route::resource('nav', NavController::class);
