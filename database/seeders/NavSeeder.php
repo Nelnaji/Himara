@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Nav;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class NavSeeder extends Seeder
 {
@@ -14,6 +15,26 @@ class NavSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Nav::create([
+            'name' => 'home',
+            'href' => "route('welcome')"
+        ]);
+
+        Nav::create([
+            'name' => 'home',
+            'href' => "route('welcome')"
+        ]);
+        Nav::create([
+            'name' => 'home',
+            'href' => "route('welcome')"
+]);
+        Nav::create([
+            'name' => 'home',
+            'href' => "route('welcome')"
+]);
+        Nav::create([
+            'name' => 'home',
+            'href' => "route('welcome')"
+        ]);
     }
 }

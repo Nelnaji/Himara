@@ -18,8 +18,8 @@ class NavController extends Controller
     public function index()
     {
 
-        $nav = Nav::all();
-        return view('back.nav.index', compact('nav'));
+        $navlinks = Nav::all();
+        return view('back.nav.index', compact('navlinks'));
     }
 
     /**
