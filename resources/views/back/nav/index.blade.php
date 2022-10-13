@@ -2,15 +2,19 @@
 @section('backContent')
 <h1>Hello navbar my old friends, I hope you're doing well</h1>
 
-@foreach ($navlinks as $navlink )
+<section class="grid">
 
-<aside>
+   @foreach ($navlinks as $navlink )
 
-    <div>{{ $navlink->name }}</div>
-    <div>{{ $navlink->href }}</div>
-    <div></div>
-    <div></div>
-</aside>
+    <aside class="flex ">
 
-@endforeach
+        <div class="border p-1">Name : {{ $navlink->name }}</div>
+        <div class="border p-1">Href : {{ $navlink->href }}</div>
+        <div class="border p-1"><a href="{{ route('back.nav.edit'), $navlink }}">Edit</a></div>
+        <div class="border p-1"><a href="{{ route('back.nav.delete', $navlink) }}">Delete</a></div>
+    </aside>
+
+    @endforeach
+    <button class="btn">add</button>
+</section>
 @endsection

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavController;
+use App\Http\Controllers\FallbackController;
 
 /*
 |--------------------------------------------------------------------------
@@ -26,4 +27,8 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('nav', NavController::class);
+Route::resource('/dashboard/nav', NavController::class);
+
+// Fallback page error 404
+
+Route::fallback(FallbackController::class);
