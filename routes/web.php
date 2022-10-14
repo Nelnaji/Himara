@@ -27,7 +27,7 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('/dashboard/nav', NavController::class);
+Route::resource('/nav', NavController::class);
 
 // Fallback page error 404
 
