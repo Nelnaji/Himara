@@ -10,8 +10,8 @@
 
         <div class="border p-1">Name : {{ $navlink->name }}</div>
         <div class="border p-1">Href : {{ $navlink->href }}</div>
-        <div class="border p-1"><a href="{{ route('back.nav.edit'), $navlink }}">Edit</a></div>
-        <div class="border p-1"><a href="{{ route('back.nav.delete', $navlink) }}">Delete</a></div>
+        <div class="border p-1"><a href="{{ route('nav.edit', $navlink)  }}">Edit</a></div>
+        <div class="border p-1"><a href="{{ route('nav.destroy', $navlink) }}">Delete</a></div>
     </aside>
 
     @endforeach
