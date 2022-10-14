@@ -109,7 +109,7 @@
             <li class="items-center">
               <a
                 href="./dashboard.html"
-                class="text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
+                class="{{ Route::currentRouteNamed('back.users.index') ? 'active' : '' }} text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
               >
                 <i class="fas fa-solid fa-users-gear mr-2 text-sm opacity-75"></i>
                 User List
@@ -120,7 +120,7 @@
             <li class="items-center">
               <a
                 href="{{ route('nav.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('nav.index') ? 'active' : '' }}"
               >
                 <i class="fas fa-solid fa-bars mr-2 text-sm text-blueGray-300"></i>
                Navbar

@@ -62,7 +62,7 @@ class NavController extends Controller
      */
     public function edit(Nav $nav)
     {
-        //
+        return view('back.nav.edit' , compact('nav'));
     }
 
     /**
@@ -74,7 +74,12 @@ class NavController extends Controller
      */
     public function update(UpdateNavRequest $request, Nav $nav)
     {
-        //
+        $nav->update([
+            'name'=> $request->name,
+            'href' => $request->href
+        ]);
+
+    return redirect()->route('nav.index');
     }
 
     /**
@@ -86,5 +91,9 @@ class NavController extends Controller
     public function destroy(Nav $nav)
     {
         //
+    }
+
+    public function navhome() {
+
     }
 }
