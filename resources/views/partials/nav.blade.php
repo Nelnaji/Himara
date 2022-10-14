@@ -21,21 +21,17 @@
       <!-- MAIN MENU -->
       <nav id="main-menu" class="main-menu">
         <ul class="menu">
-          <li class="menu-item dropdown active">
-            <a href="index.html">HOME</a>
-          </li>
-          <li class="menu-item dropdown">
-            <a href="rooms-list.html">ROOMS</a>
-          </li>
-          <li class="menu-item dropdown">
-            <a href="staff.html">TEAM</a>
-          </li>
-          <li class="menu-item dropdown">
-            <a href="gallery.html">GALLERY</a>
-          </li>
-          <li class="menu-item">
-            <a href="contact.html">CONTACT US</a>
-          </li>
+
+            @foreach ($navlinks as $item)
+
+            <li class="menu-item dropdown {{(URL::current($item->link) == $item->href) ? 'active' : ''}}">
+                <a href="
+                {{  $item->href  }} ">{{ $item->name }}</a>
+              </li>
+
+
+            @endforeach
+
           <li class="menu-item dropdown">
             <a href="#">ELEMENTS</a>
             <ul class="submenu">

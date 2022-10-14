@@ -15,11 +15,10 @@ use App\Http\Controllers\FallbackController;
 |
 */
 
+
 Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
-
-
 
 Route::get('/dashboard', function () {
     return view('dashboard');
@@ -29,6 +28,9 @@ require __DIR__.'/auth.php';
 
 Route::resource('/nav', NavController::class);
 
-// Fallback page error 404
+
+
+
+// // Fallback page error 404
 
 Route::fallback(FallbackController::class);
