@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\NavController;
 use App\Http\Controllers\FallbackController;
+use App\Http\Controllers\HomeController;
 
 /*
 |--------------------------------------------------------------------------
@@ -15,10 +16,24 @@ use App\Http\Controllers\FallbackController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('welcome');
 
+Route::get('/', [HomeController::class, 'index'])->name('welcome');
+
+Route::get('/rooms', function(){
+    return view('pages.rooms-list');
+})->name('rooms');
+
+Route::get('/team', function(){
+    return view('pages.team');
+})->name('team');
+
+Route::get('/gallery', function(){
+    return view('pages.gallery');
+})->name('gallery');
+
+Route::get('/contact', function(){
+    return view('pages.contact');
+})->name('contact');
 
 
 Route::get('/dashboard', function () {
@@ -27,8 +42,11 @@ Route::get('/dashboard', function () {
 
 require __DIR__.'/auth.php';
 
-Route::resource('/dashboard/nav', NavController::class);
+Route::resource('/nav', NavController::class);
 
-// Fallback page error 404
+
+
+
+// // Fallback page error 404
 
 Route::fallback(FallbackController::class);
