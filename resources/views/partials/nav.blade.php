@@ -25,8 +25,7 @@
             @foreach ($navlinks as $item)
 
             <li class="menu-item dropdown {{(URL::current($item->link) == $item->href) ? 'active' : ''}}">
-                <a href="
-                {{  $item->href  }} ">{{ $item->name }}</a>
+                <a href="{{ route($item->href ) }} ">{{ $item->name }}</a>
               </li>
 
 
