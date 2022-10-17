@@ -58,7 +58,7 @@ Route::get('/book-form', function () {
 
 // Middleware for authentification, if the person is not authentified she cannot have access to dashboard
 
-Route::group(['middleware'=>['auth']], function(){
+Route::group(['middleware'=>['auth','verified']], function(){
     Route::get('/dashboard', function () {
         return view('dashboard');
     })->name('dashboard');

@@ -11,7 +11,7 @@
         <li data-transition="crossfade">
           <!-- MAIN IMAGE -->
           <img
-            src="images/slider/slider1.jpg"
+            src="images/slider/{{ $sliders[0]->image }}"
             alt="Image"
             title="Image"
             data-bgposition="center center"
@@ -35,7 +35,7 @@
             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 5; color: #fff; font-weight: 900"
           >
-            TOUCH THE DREAM
+            {{ $sliders[0]->main_title }}
           </h1>
           <!-- LAYER NR. 2 -->
           <div
@@ -51,7 +51,7 @@
             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 6; color: #fff"
           >
-            Live Your Myth In Hotel Himara
+            {{ $sliders[0]->sub_title }}
           </div>
           <!-- LAYER NR. 3 -->
           <div
@@ -66,7 +66,7 @@
             style="z-index: 11"
           >
             <a class="btn" href="booking-form.html">
-              <i class="fa fa-calendar"></i>BOOK A ROOM NOW</a
+              <i class="fa fa-calendar"></i>{{ $sliders[0]->button1 }}</a
             >
           </div>
           <!-- LAYER NR. 4 -->
@@ -82,8 +82,7 @@
             style="z-index: 11"
           >
             <a class="btn" href="contact.html">
-              <i class="fa fa-envelope-o" aria-hidden="true"></i>CONTACT US
-              NOW</a
+              <i class="fa fa-envelope-o" aria-hidden="true"></i>{{ $sliders[0]->button2 }}</a
             >
           </div>
           <!-- LAYER NR. 5 -->
@@ -120,14 +119,14 @@
             data-frames='[{"delay":1800,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="color: #fff"
           >
-            Star Luxury Hotel
+          {{ $sliders[0]->star_title }}
           </div>
         </li>
         <!-- SLIDE NR. 2 -->
         <li data-transition="crossfade">
           <!-- MAIN IMAGE -->
           <img
-            src="images/slider/slider3.jpg"
+            src="images/slider/{{ $sliders[1]->image }}"
             alt="Image"
             title="Image"
             data-bgposition="center center"
@@ -151,7 +150,7 @@
             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[-100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;","mask":"x:0px;y:0px;s:inherit;e:inherit;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 5; color: #fff; font-weight: 900"
           >
-            WHERE DREAMS COME TRUE
+            {{ $sliders[1]->main_title }}
           </div>
           <!-- LAYER NR. 2 -->
           <div
@@ -167,14 +166,14 @@
             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 6; color: #fff"
           >
-            You'll Never Forget Your Stay
+            {{ $sliders[1]->sub_title }}
           </div>
         </li>
         <!-- SLIDE NR. 3 -->
         <li data-transition="crossfade">
           <!-- MAIN IMAGE -->
           <img
-            src="images/slider/slider13.jpg"
+            src="images/slider/{{ $sliders[2]->image }}"
             alt="Image"
             title="Image"
             data-bgposition="center center"
@@ -198,7 +197,7 @@
             data-frames='[{"delay":1000,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 5; color: #fff; font-weight: 900"
           >
-            ENJOY YOUR HOLIDAYS
+            {{ $sliders[2]->main_title }}
           </div>
           <!-- LAYER NR. 2 -->
           <div
@@ -214,7 +213,7 @@
             data-frames='[{"delay":1500,"speed":1500,"frame":"0","from":"y:[100%];z:0;rX:0deg;rY:0;rZ:0;sX:1;sY:1;skX:0;skY:0;opacity:0;","mask":"x:0px;y:[100%];s:inherit;e:inherit;","to":"o:1;","ease":"Power2.easeInOut"},{"delay":"wait","speed":500,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
             style="z-index: 6; color: #fff"
           >
-            Family Room from €89 per night
+            {{ $sliders[2]->sub_title }}
           </div>
         </li>
       </ul>

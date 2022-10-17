@@ -16,13 +16,12 @@ return new class extends Migration
         Schema::create('sliders', function (Blueprint $table) {
             $table->id();
             // Main view
-            $table->string('star_title');
-            $table->string('button1');
-            $table->string('button2');
-            // slider 1
-            $table->string('slider1_title');
-            $table->string('slider1_img');
-            $table->string('slider1_subtitle');
+            $table->string('star_title')->nullable();
+            $table->string('button1')->nullable();
+            $table->string('button2')->nullable();
+            $table->string('main_title');
+            $table->string('image');
+            $table->string('sub_title');
 
             $table->timestamps();
         });

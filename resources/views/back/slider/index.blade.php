@@ -34,13 +34,24 @@
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        Name
+                        Star
                       </th>
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        href
+                        Main title
                       </th>
+                      <th
+                      class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                    >
+                     Sub title
+                    </th>
+
+                    <th
+                    class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                  >
+                   image
+                  </th>
 
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
@@ -58,16 +69,25 @@
 
                     <tr>
 
-                      <td
+                        <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
                        {{$slider->star_title}}
                       </td>
+                        <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                      >
+                       {{$slider->main_title}}
+                      </td> <td
+                      class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                    >
+                     {{$slider->sub_title}}
+                    </td>
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                        <i class="fas fa-circle text-orange-500 mr-2"></i>
 
+<img src="images/slider/{{ $slider->image }}" class="h-12 w-12 bg-white rounded-full border" alt="">
                       </td>
 
                       <td

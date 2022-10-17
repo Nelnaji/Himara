@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        slider  {{ $slider->name }}/edit
+        slider  {{ $slider->id }} /edit
       </h3>
     </div>
   </div>
@@ -23,7 +23,7 @@
 
 
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <form method="POST" action="{{ route('slider.update', $slider) }}">
+                <form method="POST" action="{{ route('slider.update', $slider) }}">
                         @csrf
                         @method('PUT')
                       <h6
@@ -38,14 +38,60 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                               htmlFor="grid-password"
                             >
-                              name
+                              main title
                             </label>
                             <input
                               type="text"
                               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                              name="name"
-                              value="{{ $slider->name }}"
+                              name="main_title"
+                              value="{{ $slider->main_title }}"
                             />
+
+                          </div>
+                          <div class="relative w-full mb-3">
+                            <label
+                              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="grid-password"
+                            >
+                             Sub title
+                            </label>
+                            <input
+                              type="text"
+                              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              name="sub_title"
+                              value="{{ $slider->sub_title }}"
+                            />
+
+                          </div>
+                          <div class="relative w-full mb-3">
+                            <label
+                              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="grid-password"
+                            >
+                              Left button
+                            </label>
+                            <input
+                              type="text"
+                              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              name="button1"
+                              value="{{ $slider->button1 }}"
+                            />
+
+                          </div>
+                          <div class="relative w-full mb-3">
+                            <label
+                              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="grid-password"
+                            >
+                              Right button
+                            </label>
+                            <input
+                              type="text"
+                              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              name="button2"
+                              value="{{ $slider->button2 }}"
+                            />
+
                           </div>
                         </div>
                         <div class="w-full lg:w-6/12 px-4">
@@ -54,29 +100,19 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
 
                             >
-                              Href
+                              Image
                             </label>
-@if ($message = Session::get('success'))
-            <div class="alert alert-success alert-block">
-                <strong>{{$message}}</strong>
-            </div>
 
-            <img src="{{ asset('images/slider/'.Session::get('slider1_img')) }}" />
-        @endif
 
-        <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
-            @csrf
             <input type="file" class="form-control" name="image" />
 
-            <button type="submit" class="btn btn-sm">Upload</button>
-        </form>
+
                           </div>
                         </div>
 
                       </div>
 
-
-<button type="submit" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">save</button>
+    <button type="submit" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Save Changes</button>
 
                     </form>
                   </div>
