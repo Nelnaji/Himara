@@ -243,13 +243,28 @@
                       <i class="fa fa-info-circle"></i>
                     </a>
                   </label>
+                  @if (Route::has('login'))
+                  @auth
+
                   <input
-                    class="form-control"
-                    name="booking-name"
-                    type="text"
-                    data-trigger="hover"
-                    placeholder="Write Your Name"
+                  class="form-control"
+                  name="booking-name"
+                  type="text"
+                  data-trigger="hover"
+                  placeholder="Write Your Name"
+                  value="{{ Auth::user()->name }} "
                   />
+                  @else
+                  <input
+                  class="form-control"
+                  name="booking-name"
+                  type="text"
+                  data-trigger="hover"
+                  placeholder="Write Your Name"
+
+                  />
+                  @endauth
+                  @endif
                 </div>
               </div>
               <!-- EMAIL -->
@@ -268,12 +283,25 @@
                       <i class="fa fa-info-circle"></i>
                     </a>
                   </label>
-                  <input
-                    class="form-control"
-                    name="booking-email"
-                    type="email"
-                    placeholder="Write your Email"
-                  />
+
+                  @if (Route::has('login'))
+@auth
+
+<input
+class="form-control"
+name="booking-email"
+type="email"
+placeholder="Write your Email"
+value="{{ Auth::user()->email }} "/>
+
+@else
+<input
+class="form-control"
+name="booking-email"
+type="email"
+placeholder="Write your Email"/>
+@endauth
+                  @endif
                 </div>
               </div>
               <!-- ROOM TYPE -->

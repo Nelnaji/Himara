@@ -67,7 +67,6 @@ Route::group(['middleware'=>['auth']], function(){
     // if user is not admin he wont get access to these routes
 
     Route::group(["middleware"=>['is_admin']], function () {
-
         Route::resource('/nav', NavController::class);
         Route::resource('/users', UserController::class);
         Route::resource('/team', TeamController::class);
@@ -87,16 +86,7 @@ Route::group(['middleware'=>['auth']], function(){
 
 });
 
-
-
-
-
-
-
-
-
 require __DIR__.'/auth.php';
-
 
 // // Fallback page error 404
 

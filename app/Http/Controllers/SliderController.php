@@ -43,6 +43,8 @@ class SliderController extends Controller
         ]);
 
     return redirect()->route('slider.index');
+
+
     }
 
     /**
@@ -94,5 +96,10 @@ class SliderController extends Controller
     {
         $slider->delete();
         return redirect()->route('slider.index');
+    }
+
+    private function storeimage($request) {
+        $newImageName = uniqid() . '-' . $request->title . '.' . $request->image->extension();
+        return $request->image->move(public_path('images/slider/'), $newImageName);
     }
 }

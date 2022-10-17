@@ -56,7 +56,20 @@
                             >
                               Href
                             </label>
+@if ($message = Session::get('success'))
+            <div class="alert alert-success alert-block">
+                <strong>{{$message}}</strong>
+            </div>
 
+            <img src="{{ asset('images/slider/'.Session::get('slider1_img')) }}" />
+        @endif
+
+        <form method="POST" action="{{ route('image.store') }}" enctype="multipart/form-data">
+            @csrf
+            <input type="file" class="form-control" name="image" />
+
+            <button type="submit" class="btn btn-sm">Upload</button>
+        </form>
                           </div>
                         </div>
 
