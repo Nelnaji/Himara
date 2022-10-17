@@ -16,7 +16,7 @@ class SliderController extends Controller
     public function index()
     {
         $sliders = Slider::all();
-        return view('back.sliders.index', compact('sliders'));
+        return view('back.slider.index', compact('sliders'));
     }
 
     /**
@@ -26,7 +26,7 @@ class SliderController extends Controller
      */
     public function create()
     {
-        return view('back.sliders.create');
+        return view('back.slider.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class SliderController extends Controller
      */
     public function edit(Slider $slider)
     {
-        return view('back.sliders.edit' , compact('slider'));
+        return view('back.slider.edit' , compact('slider'));
     }
 
     /**

@@ -16,7 +16,7 @@ class VideoController extends Controller
     public function index()
     {
         $videos = Video::all();
-        return view('back.videos.index', compact('videos'));
+        return view('back.video.index', compact('videos'));
     }
 
     /**
@@ -26,7 +26,7 @@ class VideoController extends Controller
      */
     public function create()
     {
-        return view('back.videos.create');
+        return view('back.video.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class VideoController extends Controller
      */
     public function edit(Video $video)
     {
-        return view('back.videos.edit' , compact('video'));
+        return view('back.video.edit' , compact('video'));
     }
 
     /**

@@ -16,7 +16,7 @@ class TestimonialController extends Controller
     public function index()
     {
         $testimonials = Testimonial::all();
-        return view('back.testimonials.index', compact('testimonials'));
+        return view('back.testimonial.index', compact('testimonials'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TestimonialController extends Controller
      */
     public function create()
     {
-        return view('back.testimonials.create');
+        return view('back.testimonial.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class TestimonialController extends Controller
      */
     public function edit(Testimonial $testimonial)
     {
-        return view('back.testimonials.edit' , compact('testimonial'));
+        return view('back.testimonial.edit' , compact('testimonial'));
     }
 
     /**

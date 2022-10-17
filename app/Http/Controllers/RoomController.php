@@ -17,7 +17,7 @@ class RoomController extends Controller
     {
 
         $rooms = Room::all();
-        return view('back.rooms.index', compact('rooms'));
+        return view('back.room.index', compact('rooms'));
     }
 
     /**
@@ -27,7 +27,7 @@ class RoomController extends Controller
      */
     public function create()
     {
-        return view('back.rooms.create');
+        return view('back.room.create');
     }
 
     /**
@@ -65,7 +65,7 @@ class RoomController extends Controller
      */
     public function edit(Room $room)
     {
-        return view('back.rooms.edit' , compact('room'));
+        return view('back.room.edit' , compact('room'));
     }
 
     /**

@@ -16,7 +16,7 @@ class TeamController extends Controller
     public function index()
     {
         $teams = Team::all();
-        return view('back.teams.index', compact('teams'));
+        return view('back.team.index', compact('teams'));
     }
 
     /**
@@ -26,7 +26,7 @@ class TeamController extends Controller
      */
     public function create()
     {
-        return view('back.teams.create');
+        return view('back.team.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class TeamController extends Controller
      */
     public function edit(Team $team)
     {
-        return view('back.teams.edit' , compact('team'));
+        return view('back.team.edit' , compact('team'));
     }
 
     /**

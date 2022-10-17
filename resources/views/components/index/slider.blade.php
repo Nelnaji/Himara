@@ -418,7 +418,7 @@
                   BOOK A ROOM
                 </button>
                 <div class="advanced-form-link">
-                  <a href="booking-form.html"> Advanced Booking Form </a>
+                  <a href="{{ route('book-form') }}"> Advanced Booking Form </a>
                 </div>
               </div>
             @else

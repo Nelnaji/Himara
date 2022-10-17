@@ -101,7 +101,7 @@
           <h6
             class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
           >
-            Admin Layout Sections
+            Admin Panel
           </h6>
           <!-- Navigation -->
 
@@ -109,7 +109,7 @@
             <li class="items-center">
               <a
                 href="{{ route('users.index') }}"
-                class="{{ Route::currentRouteNamed('back.users.index') ? 'active' : '' }} text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
+                class="{{ Route::currentRouteNamed('users.index') ? 'text-currentGold' : '' }} text-xs uppercase py-3 font-bold block  hover:text-hoverGold"
               >
                 <i class="fas fa-solid fa-users-gear mr-2 text-sm opacity-75"></i>
                 User List
@@ -120,7 +120,7 @@
             <li class="items-center">
               <a
                 href="{{ route('nav.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('nav.index') ? 'active' : '' }}"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('nav.index') ? 'text-currentGold' : '' }} "
               >
                 <i class="fas fa-solid fa-bars mr-2 text-sm text-blueGray-300"></i>
                Navbar
@@ -128,8 +128,8 @@
             </li>
             <li class="items-center">
               <a
-                href="{{ route('rooms.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                href="{{ route('room.index') }}"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('room.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-city mr-2 text-sm text-blueGray-300"></i>
                 Rooms
@@ -138,7 +138,7 @@
             <li class="items-center">
               <a
                 href="{{ route('slider.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('slider.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-sliders mr-2 text-sm text-blueGray-300"></i>
                 Slider
@@ -147,7 +147,7 @@
             <li class="items-center">
               <a
                 href="{{ route('gallery.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('gallery.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-images mr-2 text-sm text-blueGray-300"></i>
                 Gallery
@@ -155,8 +155,8 @@
             </li>
             <li class="items-center">
               <a
-                href="{{ route('services.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                href="{{ route('service.index') }}"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('service.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-blender-phone mr-2 text-sm text-blueGray-300"></i>
              Services
@@ -165,7 +165,7 @@
             <li class="items-center">
               <a
                 href="{{ route('team.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('team.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-people-group mr-2 text-sm text-blueGray-300"></i>
                Team
@@ -174,7 +174,7 @@
             <li class="items-center">
               <a
                 href="{{ route('about.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('about.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-circle-info mr-2 text-sm text-blueGray-300"></i>
                About
@@ -182,8 +182,8 @@
             </li>
             <li class="items-center">
               <a
-                href="{{ route('testimonials.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                href="{{ route('testimonial.index') }}"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('testimonial.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-quote-left mr-2 text-sm text-blueGray-300"></i>
                 Testimonials
@@ -192,7 +192,7 @@
             <li class="items-center">
               <a
                 href="{{ route('restaurant.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('restaurant.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-utensils mr-2 text-sm text-blueGray-300"></i>
                 Restaurant
@@ -200,8 +200,8 @@
             </li>
             <li class="items-center">
               <a
-                href="{{ route('news.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                href="{{ route('post.index') }}"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('post.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
                 news
@@ -210,7 +210,7 @@
             <li class="items-center">
               <a
                 href="{{ route('video.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('video.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-solid fa-video mr-2 text-sm text-blueGray-300"></i>
                 video
@@ -219,7 +219,7 @@
             <li class="items-center">
               <a
                 href="{{ route('footer.index') }}"
-                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
+                class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('footer.index') ? 'text-currentGold' : '' }}"
               >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
                 footer
@@ -228,43 +228,7 @@
 
           </ul>
 
-          <!-- Divider -->
-          <hr class="my-4 md:min-w-full" />
-          <!-- Heading -->
-          <h6
-            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-          >
-            Auth Layout Pages
-          </h6>
-          <!-- Navigation -->
 
-          <ul
-            class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
-          >
-            <li class="items-center">
-              <a
-                href="../auth/login.html"
-                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
-              >
-                <i
-                  class="fas fa-fingerprint text-blueGray-300 mr-2 text-sm"
-                ></i>
-                Login
-              </a>
-            </li>
-
-            <li class="items-center">
-              <a
-                href="../auth/register.html"
-                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
-              >
-                <i
-                  class="fas fa-clipboard-list text-blueGray-300 mr-2 text-sm"
-                ></i>
-                Register
-              </a>
-            </li>
-          </ul>
 
           <!-- Divider -->
           <hr class="my-4 md:min-w-full" />
@@ -272,45 +236,7 @@
           <h6
             class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
           >
-            No Layout Pages
-          </h6>
-          <!-- Navigation -->
-
-          <ul
-            class="md:flex-col md:min-w-full flex flex-col list-none md:mb-4"
-          >
-            <li class="items-center">
-              <a
-                href="../landing.html"
-                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
-              >
-                <i
-                  class="fas fa-newspaper text-blueGray-300 mr-2 text-sm"
-                ></i>
-                Landing Page
-              </a>
-            </li>
-
-            <li class="items-center">
-              <a
-                href="../profile.html"
-                class="text-blueGray-700 hover:text-currentGold text-xs uppercase py-3 font-bold block"
-              >
-                <i
-                  class="fas fa-user-circle text-blueGray-300 mr-2 text-sm"
-                ></i>
-                Profile Page
-              </a>
-            </li>
-          </ul>
-
-          <!-- Divider -->
-          <hr class="my-4 md:min-w-full" />
-          <!-- Heading -->
-          <h6
-            class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
-          >
-            Personal Pages
+            Personal Panel
           </h6>
           <!-- Navigation -->
           <ul
@@ -325,15 +251,7 @@
               Profile
             </a>
           </li>
-          <li class="items-center">
-            <a
-              href="./settings.html"
-              class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
-            >
-              <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
-              Settings
-            </a>
-          </li>
+
           <li class="items-center">
             <form method="POST" action="{{ route('logout') }}">
                 @csrf

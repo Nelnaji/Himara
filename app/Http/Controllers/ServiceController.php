@@ -16,7 +16,7 @@ class ServiceController extends Controller
     public function index()
     {
         $services = Service::all();
-        return view('back.services.index', compact('services'));
+        return view('back.service.index', compact('services'));
     }
 
     /**
@@ -26,7 +26,7 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('back.services.create');
+        return view('back.service.create');
     }
 
     /**
@@ -64,7 +64,7 @@ class ServiceController extends Controller
      */
     public function edit(Service $service)
     {
-        return view('back.services.edit' , compact('service'));
+        return view('back.service.edit' , compact('service'));
     }
 
     /**

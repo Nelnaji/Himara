@@ -82,7 +82,7 @@ class GalleryController extends Controller
 
         ]);
 
-    return redirect()->route('gallery.index')
+    return redirect()->route('gallery.index');
     }
 
     /**

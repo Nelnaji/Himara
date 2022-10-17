@@ -31,25 +31,29 @@ use App\Http\Controllers\TestimonialController;
 
 Route::get('/', [HomeController::class, 'index'])->name('welcome');
 
-Route::get('/rooms', function(){
+Route::get('/rooms-list', function(){
     return view('pages.rooms-list');
 })->name('rooms');
 
-Route::get('/team', function(){
+Route::get('/staff-team', function(){
     return view('pages.team');
 })->name('team');
 
-Route::get('/gallery', function(){
+Route::get('/gallery-list', function(){
     return view('pages.gallery');
 })->name('gallery');
 
-Route::get('/contact', function(){
+Route::get('/contact-us', function(){
     return view('pages.contact');
 })->name('contact');
 
-Route::get('/about', function(){
+Route::get('/about-us', function(){
     return view('pages.about');
-})->name('contact');
+})->name('about');
+
+Route::get('/book-form', function () {
+    return view('pages.book-form');
+})->name('book-form');
 
 
 // Middleware for authentification, if the person is not authentified she cannot have access to dashboard
@@ -67,15 +71,15 @@ Route::group(['middleware'=>['auth']], function(){
         Route::resource('/nav', NavController::class);
         Route::resource('/users', UserController::class);
         Route::resource('/team', TeamController::class);
-        Route::resource('/rooms', RoomController::class);
+        Route::resource('/room', RoomController::class);
         Route::resource('/video', VideoController::class);
-        Route::resource('/services', ServiceController::class);
+        Route::resource('/service', ServiceController::class);
         Route::resource('/restaurant', RestaurantController::class);
         Route::resource('/slider', SliderController::class);
-        Route::resource('/news', PostController::class);
+        Route::resource('/post', PostController::class);
         Route::resource('/about', AboutController::class);
         Route::resource('/gallery', GalleryController::class);
-        Route::resource('/testimonials', TestimonialController::class);
+        Route::resource('/testimonial', TestimonialController::class);
         Route::resource('/footer', FooterController::class);
     });
 
