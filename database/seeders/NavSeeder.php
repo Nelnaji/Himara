@@ -17,7 +17,7 @@ class NavSeeder extends Seeder
     {
         Nav::create([
             'name' => 'home',
-            'href' => "route('welcome')"
+            'href' => "welcome"
         ]);
 
         Nav::create([
