@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        Nav links
+        slider links
       </h3>
     </div>
   </div>
@@ -34,13 +34,24 @@
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        Name
+                        Star
                       </th>
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        href
+                        Main title
                       </th>
+                      <th
+                      class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                    >
+                     Sub title
+                    </th>
+
+                    <th
+                    class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                  >
+                   image
+                  </th>
 
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
@@ -53,21 +64,30 @@
                   <tbody>
 
 
-                    @foreach ($navlinks as $navlink)
+                    @foreach ($sliders as $slider)
 
 
                     <tr>
 
-                      <td
+                        <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                       {{$navlink->name}}
+                       {{$slider->star_title}}
                       </td>
+                        <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                      >
+                       {{$slider->main_title}}
+                      </td> <td
+                      class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                    >
+                     {{$slider->sub_title}}
+                    </td>
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                        <i class="fas fa-circle text-orange-500 mr-2"></i>
-                        {{ $navlink->href }}
+
+<img src="images/slider/{{ $slider->image }}" class="h-12 w-12 bg-white rounded-full border" alt="">
                       </td>
 
                       <td
@@ -85,7 +105,7 @@
                           id="table-light-1-dropdown"
                         >
                           <a
-                            href="{{ route('nav.edit', $navlink->id) }}"
+                            href="{{ route('slider.edit', $slider->id) }}"
                             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                             >Edit</a
                           >
@@ -93,7 +113,7 @@
                             class="h-0 my-2 border border-solid border-blueGray-100"
                           ></div>
                           <a
-                            href="{{ route('nav.destroy', $navlink->id) }}"
+                            href="{{ route('slider.destroy', $slider->id) }}"
                             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                             >Delete</a
                           >
@@ -112,7 +132,7 @@
             </div>
             <div class="flex w-full justify-end">
 
-                <a href="{{ route('nav.create') }}" class="px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ">Add new link</a>
+                <a href="{{ route('slider.create') }}" class="px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150 ">Add new link</a>
             </div>
             </div>
 

@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use App\Models\Nav;
+use App\Models\Slider;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -32,7 +33,10 @@ class AppServiceProvider extends ServiceProvider
         });
 
 
-
+        view()->composer('components.index.slider', function ($view) {
+            $view->with('sliders',
+            Slider::all());
+        });
 
     }
 }

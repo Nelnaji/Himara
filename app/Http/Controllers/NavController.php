@@ -95,10 +95,7 @@ class NavController extends Controller
      */
     public function destroy(Nav $nav)
     {
-        //
-    }
-
-    public function navhome() {
-
+       $nav->delete();
+       return redirect()->route('nav.index');
     }
 }

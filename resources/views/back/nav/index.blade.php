@@ -92,11 +92,15 @@
                           <div
                             class="h-0 my-2 border border-solid border-blueGray-100"
                           ></div>
-                          <a
-                            href="{{ route('nav.destroy', $navlink->id) }}"
-                            class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-                            >Delete</a
-                          >
+
+<form method="POST" action="{{ route('nav.destroy', $navlink) }}">
+@method('DELETE')
+    @csrf
+
+    <button type="submit" class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700" onclick="return confirm('Are you sure?')">Delete</button>
+</form>
+
+
                         </div>
                       </td>
                     </tr>
