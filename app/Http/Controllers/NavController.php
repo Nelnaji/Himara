@@ -29,7 +29,7 @@ class NavController extends Controller
      */
     public function create()
     {
-        //
+        return view('back.nav.create');
     }
 
     /**
@@ -40,7 +40,12 @@ class NavController extends Controller
      */
     public function store(StoreNavRequest $request)
     {
-        //
+        Nav::create([
+            'name' => $request->input('name'),
+            'href' => $request->input('href')
+        ]);
+
+    return redirect()->route('nav.index');
     }
 
     /**
@@ -90,10 +95,7 @@ class NavController extends Controller
      */
     public function destroy(Nav $nav)
     {
-        //
-    }
-
-    public function navhome() {
-
+       $nav->delete();
+       return redirect()->route('nav.index');
     }
 }

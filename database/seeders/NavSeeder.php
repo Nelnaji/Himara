@@ -17,24 +17,24 @@ class NavSeeder extends Seeder
     {
         Nav::create([
             'name' => 'home',
-            'href' => "welcome"
+            'href' => 'welcome'
         ]);
 
         Nav::create([
-            'name' => 'home',
-            'href' => "route('welcome')"
+            'name' => 'rooms',
+            'href' => "rooms"
         ]);
         Nav::create([
-            'name' => 'home',
-            'href' => "route('welcome')"
+            'name' => 'team',
+            'href' => "team"
 ]);
         Nav::create([
-            'name' => 'home',
-            'href' => "route('welcome')"
+            'name' => 'gallery',
+            'href' => "gallery"
 ]);
         Nav::create([
-            'name' => 'home',
-            'href' => "route('welcome')"
+            'name' => 'contact us',
+            'href' => "contact"
         ]);
     }
 }

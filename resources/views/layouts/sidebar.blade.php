@@ -108,7 +108,7 @@
           <ul class="md:flex-col md:min-w-full flex flex-col list-none">
             <li class="items-center">
               <a
-                href="./dashboard.html"
+                href="{{ route('users.index') }}"
                 class="{{ Route::currentRouteNamed('back.users.index') ? 'active' : '' }} text-xs uppercase py-3 font-bold block text-currentGold hover:text-hoverGold"
               >
                 <i class="fas fa-solid fa-users-gear mr-2 text-sm opacity-75"></i>
@@ -128,7 +128,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('rooms.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-city mr-2 text-sm text-blueGray-300"></i>
@@ -137,7 +137,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('slider.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-sliders mr-2 text-sm text-blueGray-300"></i>
@@ -146,7 +146,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('gallery.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-images mr-2 text-sm text-blueGray-300"></i>
@@ -155,7 +155,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('services.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-blender-phone mr-2 text-sm text-blueGray-300"></i>
@@ -164,16 +164,16 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('team.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-people-group mr-2 text-sm text-blueGray-300"></i>
-                Staff
+               Team
               </a>
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('about.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-circle-info mr-2 text-sm text-blueGray-300"></i>
@@ -182,7 +182,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('testimonials.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-quote-left mr-2 text-sm text-blueGray-300"></i>
@@ -191,7 +191,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('restaurant.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-utensils mr-2 text-sm text-blueGray-300"></i>
@@ -200,7 +200,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('news.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
@@ -209,7 +209,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('video.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-solid fa-video mr-2 text-sm text-blueGray-300"></i>
@@ -218,7 +218,7 @@
             </li>
             <li class="items-center">
               <a
-                href="./settings.html"
+                href="{{ route('footer.index') }}"
                 class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold"
               >
                 <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
