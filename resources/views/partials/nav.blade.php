@@ -7,7 +7,7 @@
       <!-- BRAND -->
       <div class="brand">
         <div class="logo">
-          <a href="index.html">
+          <a href="{{ route('welcome') }}">
             <img src="images/logo.svg" alt="Hotel Himara" />
           </a>
         </div>

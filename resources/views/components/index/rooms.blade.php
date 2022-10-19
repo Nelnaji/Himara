@@ -2,7 +2,7 @@
     <section class="rooms gray">
         <div class="container">
           <div class="section-title">
-            <h4>OUR <span class="text-himara">ROOMS</span></h4>
+            <h4>{{ $titles[1]->main_title }} <span class="text-himara">{{ $titles[1]->color_title }}</span></h4>
             <p class="section-subtitle">Our favorite rooms</p>
             <a href="rooms-list.html" class="view-all">View all rooms</a>
           </div>

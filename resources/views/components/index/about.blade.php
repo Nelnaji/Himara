@@ -4,7 +4,7 @@
         <div class="col-lg-8">
           <div class="section-title">
             <h4 class="text-uppercase">
-              Hotel Himara. <span class="text-himara"> since 1992</span>
+                {{ $titles[0]->main_title }} <span class="text-himara"> {{ $titles[0]->color_title }}</span>
             </h4>
             <p class="section-subtitle">
               High quality accommodation services

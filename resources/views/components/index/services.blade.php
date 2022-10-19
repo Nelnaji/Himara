@@ -2,7 +2,7 @@
   <section class="services">
     <div class="container">
       <div class="section-title">
-        <h4>HIMARA. <span class="text-himara">SERVICES</span></h4>
+        <h4>{{ $titles[2]->main_title }} <span class="text-himara">{{ $titles[2]->color_title }}</span></h4>
         <p class="section-subtitle">Check out our awesome services</p>
       </div>
       <div class="row">

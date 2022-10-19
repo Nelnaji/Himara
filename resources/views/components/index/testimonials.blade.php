@@ -2,7 +2,7 @@
    <section class="testimonials gray">
     <div class="container">
       <div class="section-title">
-        <h4>OUR GUESTS LOVE US</h4>
+        <h4>{{ $titles[4]->main_title }}<span class="text-himara">{{ $titles[4]->color_title }}</span></h4>
         <p class="section-subtitle">What our guests are saying about us</p>
       </div>
       <div class="owl-carousel testimonials-owl">

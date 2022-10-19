@@ -15,7 +15,10 @@ return new class extends Migration
     {
         Schema::create('abouts', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
+            $table->string('sub_title');
+            $table->text('body');
+            $table->string('recommended');
+            $table->string('main_img');
             $table->timestamps();
         });
     }

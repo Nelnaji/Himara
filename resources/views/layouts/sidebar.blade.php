@@ -225,7 +225,15 @@
                 footer
               </a>
             </li>
-
+            <li class="items-center">
+                <a
+                  href="{{ route('title.index') }}"
+                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('footer.index') ? 'text-currentGold' : '' }}"
+                >
+                  <i class="fas fa-tools mr-2 text-sm text-blueGray-300"></i>
+                  title
+                </a>
+              </li>
           </ul>
 
 

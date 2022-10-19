@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+
+use App\Models\Team;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\Hash;
 
@@ -15,6 +17,16 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
+        $this->call(TitleSeeder::class);
+        $this->call(SliderSeeder::class);
+        $this->call(NavSeeder::class);
+        $this->call(TeamSeeder::class);
+        $this->call(HousekeeperSeeder::class);
+        $this->call(GallerySeeder::class);
+        $this->call(TopbarSeeder::class);
+
+
+
         \App\Models\User::factory(10)->create();
         $this->call(AdminSeeder::class);
         $this->call(ModeratorSeeder::class);

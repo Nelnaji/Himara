@@ -9,7 +9,7 @@
       >
         <div class="container">
           <div class="section-title">
-            <h4>HIMARA. RESTAURANT</h4>
+            <h4>{{ $titles[5]->main_title }}<span class="text-himara">{{ $titles[5]->color_title }}</span></h4>
             <p class="section-subtitle">Live a gourmet dining experience</p>
           </div>
           <div class="row">
