@@ -8,6 +8,7 @@ use App\Http\Controllers\RoomController;
 use App\Http\Controllers\TeamController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\TitleController;
 use App\Http\Controllers\VideoController;
 use App\Http\Controllers\FooterController;
 use App\Http\Controllers\SliderController;
@@ -55,6 +56,10 @@ Route::get('/book-form', function () {
     return view('pages.book-form');
 })->name('book-form');
 
+Route::get('/roomun', function(){
+    return view('pages.room');
+});
+
 
 // Middleware for authentification, if the person is not authentified she cannot have access to dashboard
 
@@ -80,6 +85,7 @@ Route::group(['middleware'=>['auth','verified']], function(){
         Route::resource('/gallery', GalleryController::class);
         Route::resource('/testimonial', TestimonialController::class);
         Route::resource('/footer', FooterController::class);
+        Route::resource('/title', TitleController::class);
     });
 
 

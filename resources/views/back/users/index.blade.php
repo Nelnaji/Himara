@@ -76,13 +76,13 @@
                         <a
                           href="#"
                           class="text-blueGray-500 block py-1 px-3"
-                          onclick="openDropdown(event,'table-light-1-dropdown')"
+                          onclick="openDropdown(event,'table-light-{{ $user->id }}-dropdown')"
                         >
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div
                           class="hidden absolute bg-white text-base z-50 float-right py-2 list-none text-left rounded shadow-lg min-w-48 right-0 top-0"
-                          id="table-light-1-dropdown"
+                          id="table-light-{{ $user->id }}-dropdown"
                         >
                           <a
                             href="{{ route('users.edit', $user->id) }}"

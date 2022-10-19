@@ -15,7 +15,11 @@ return new class extends Migration
     {
         Schema::create('teams', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
             $table->string('name');
+            $table->string('image');
+            $table->boolean('is_housekeeper')->default(false);
+            $table->text('description');
             $table->timestamps();
         });
     }

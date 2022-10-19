@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-md-5">
           <div class="section-title">
-            <h4>GET IN TOUCH</h4>
+            <h4 class="title">{{ $titles[7]->main_title }}<span class="text-himara">{{ $titles[7]->color_title }}</span></h4>
             <p class="section-subtitle">Get in touch</p>
           </div>
           <ul class="contact-details">
@@ -33,7 +33,7 @@
         </div>
         <div class="col-md-7">
           <div class="section-title">
-            <h4>CONTACT US</h4>
+            <h4 class="title">{{ $titles[8]->main_title }}<span class="text-himara">{{ $titles[8]->color_title }}</span></h4>
             <p class="section-subtitle">Say hello</p>
           </div>
           <form id="contact-form" name="contact-form">

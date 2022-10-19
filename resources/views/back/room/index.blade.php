@@ -76,13 +76,13 @@
                         <a
                           href="#"
                           class="text-blueGray-500 block py-1 px-3"
-                          onclick="openDropdown(event,'table-light-1-dropdown')"
+                          onclick="openDropdown(event,'table-light-{{ $room->id }}-dropdown')"
                         >
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div
                           class="hidden absolute bg-white text-base z-50 float-right py-2 list-none text-left rounded shadow-lg min-w-48 right-0 top-0"
-                          id="table-light-1-dropdown"
+                          id="table-light-{{ $room->id }}-dropdown"
                         >
                           <a
                             href="{{ route('room.edit', $room->id) }}"
@@ -93,7 +93,7 @@
                             class="h-0 my-2 border border-solid border-blueGray-100"
                           ></div>
                           <a
-                            href="{{ route('room.destroy', $room->id) }}"
+                            href="{{ route('room.destroy', $room) }}"
                             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                             >Delete</a
                           >

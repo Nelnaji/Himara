@@ -2,7 +2,7 @@
   <section class="news">
     <div class="container">
       <div class="section-title">
-        <h4 class="title">LATEST NEWS</h4>
+        <h4 class="title">{{ $titles[6]->main_title }}<span class="text-himara">{{ $titles[6]->color_title }}</span></h4>
         <p class="section-subtitle">Check out our latest news</p>
       </div>
       <div class="row">

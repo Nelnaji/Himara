@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        gallery  {{ $gallery->name }}/edit
+        Gallery  {{ $gallery->id }} /edit
       </h3>
     </div>
   </div>
@@ -23,13 +23,13 @@
 
 
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                    <form method="POST" action="{{ route('gallery.update', $gallery) }}">
+                <form method="POST" action="{{ route('gallery.update', $gallery) }}">
                         @csrf
                         @method('PUT')
                       <h6
                         class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"
                       >
-                        gallery Link Information  ID : {{ $gallery->id }}
+                        Gallery Link Information  ID : {{ $gallery->id }}
                       </h6>
                       <div class="flex flex-wrap">
                         <div class="w-full lg:w-6/12 px-4">
@@ -38,15 +38,32 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                               htmlFor="grid-password"
                             >
-                              name
+                              main title
                             </label>
                             <input
                               type="text"
                               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                              name="name"
-                              value="{{ $gallery->name }}"
+                              name="figcaption"
+                              value="{{ $gallery->figcaption }}"
                             />
+
                           </div>
+                          <div class="relative w-full mb-3">
+                            <label
+                              class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                              htmlFor="grid-password"
+                            >
+                             Filter
+                            </label>
+                            <input
+                              type="text"
+                              class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                              name="filter"
+                              value="{{ $gallery->filter }}"
+                            />
+
+                          </div>
+
                         </div>
                         <div class="w-full lg:w-6/12 px-4">
                           <div class="relative w-full mb-3">
@@ -54,16 +71,20 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
 
                             >
-                              Href
+                              Image
                             </label>
+
+                            <img src="/images/gallery/{{ $gallery->image }}" class="h-48 py-2" alt="">
+
+            <input type="file" class="form-control" name="image" />
+
 
                           </div>
                         </div>
 
                       </div>
 
-
-<button type="submit" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">save</button>
+    <button type="submit" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">Save Changes</button>
 
                     </form>
                   </div>

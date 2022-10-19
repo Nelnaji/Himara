@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        gallery links
+        slider links
       </h3>
     </div>
   </div>
@@ -34,13 +34,18 @@
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        Name
+                      Figcaption
                       </th>
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        href
+                       Filter
                       </th>
+                                         <th
+                    class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                  >
+                   image
+                  </th>
 
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
@@ -58,16 +63,21 @@
 
                     <tr>
 
-                      <td
+                        <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                       {{$gallery->name}}
+                       {{$gallery->figcaption}}
+                      </td>
+                        <td
+                        class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                      >
+                       {{$gallery->filter}}
                       </td>
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                        <i class="fas fa-circle text-orange-500 mr-2"></i>
-                    
+
+<img src="images/gallery/{{ $gallery->image }}" class="h-12 w-12 bg-white border" alt="">
                       </td>
 
                       <td
@@ -76,13 +86,13 @@
                         <a
                           href="#"
                           class="text-blueGray-500 block py-1 px-3"
-                          onclick="openDropdown(event,'table-light-1-dropdown')"
+                          onclick="openDropdown(event,'table-light-{{ $gallery->id }}-dropdown')"
                         >
                           <i class="fas fa-ellipsis-v"></i>
                         </a>
                         <div
                           class="hidden absolute bg-white text-base z-50 float-right py-2 list-none text-left rounded shadow-lg min-w-48 right-0 top-0"
-                          id="table-light-1-dropdown"
+                          id="table-light-{{ $gallery->id }}-dropdown"
                         >
                           <a
                             href="{{ route('gallery.edit', $gallery->id) }}"
@@ -93,7 +103,7 @@
                             class="h-0 my-2 border border-solid border-blueGray-100"
                           ></div>
                           <a
-                            href="{{ route('gallery.destroy', $gallery->id) }}"
+                            href="{{ route('gallery.destroy', $gallery) }}"
                             class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
                             >Delete</a
                           >

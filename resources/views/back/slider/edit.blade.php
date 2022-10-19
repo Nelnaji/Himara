@@ -103,6 +103,7 @@
                               Image
                             </label>
 
+                            <img src="/images/slider/{{ $slider->image }}" class="h-48 py-2" alt="">
 
             <input type="file" class="form-control" name="image" />
 
