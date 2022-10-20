@@ -252,6 +252,7 @@
                   data-trigger="hover"
                   placeholder="Write Your Name"
                   value="{{ Auth::user()->name }} "
+                  readonly="readonly"
                   />
                   @else
                   <input
@@ -291,7 +292,7 @@ class="form-control"
 name="booking-email"
 type="email"
 placeholder="Write your Email"
-value="{{ Auth::user()->email }} "/>
+value="{{ Auth::user()->email }}  "   readonly="readonly"/>
 
 @else
 <input

@@ -79,8 +79,15 @@ class AppServiceProvider extends ServiceProvider
         });
 
         // sending team data to the team page
+
+        // this only sends the housekeeper
         view()->composer('pages.team', function($view) {
-            $view->with('teammembers', Team::all());
+            $view->with('housekeeper', Team::where('is_housekeeper', true)->get());
+        });
+
+        // this only sends non housekeepers, limit them to 8 and randomises them
+        view()->composer('pages.team', function($view) {
+            $view->with('teammembers', Team::where('is_housekeeper', false)->limit(7)->inRandomOrder()->get());
         });
 
         // Sending data to gallery
@@ -90,7 +97,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Sending data to gallery limit it to 5 only
         view()->composer('components.index.gallery', function($view) {
-        $view->with('items', Gallery::all());
+        $view->with('items', Gallery::inRandomOrder()->get());
         });
 
         view()->composer('components.index.about', function($view) {

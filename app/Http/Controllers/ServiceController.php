@@ -15,7 +15,7 @@ class ServiceController extends Controller
      */
     public function index()
     {
-        $services = Service::all();
+        $services = Service::with('icon')->get();
         return view('back.service.index', compact('services'));
     }
 
@@ -26,7 +26,8 @@ class ServiceController extends Controller
      */
     public function create()
     {
-        return view('back.service.create');
+        $services = Service::all();
+        return view('back.service.create', compact('services'));
     }
 
     /**
@@ -39,10 +40,13 @@ class ServiceController extends Controller
     {
         Service::create([
             'name' => $request->input('name'),
-
+            'description' => $request->input('description'),
+            'image' => $request->input('image'),
+            'icon_id' => $request->input('icon_id'),
         ]);
 
     return redirect()->route('service.index');
+    
     }
 
     /**

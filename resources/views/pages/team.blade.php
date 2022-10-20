@@ -20,6 +20,20 @@
             <div class="container">
               <div class="row">
 
+            <!-- ITEM -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="staff-item">
+                      <figure>
+                        <img src="images/staff/{{ $housekeeper[0]->image }}" class="img-fluid" alt="Image">
+                        <div class="position">{{ $housekeeper[0]->title }}</div>
+                      </figure>
+                      <div class="details">
+                        <h5>{{ $housekeeper[0]->name }}</h5>
+                        <p>{{ $housekeeper[0]->description }}</p>
+                      </div>
+                    </div>
+                  </div>
+
 @foreach ($teammembers as $staff )
  <!-- ITEM -->
  <div class="col-lg-3 col-md-6">

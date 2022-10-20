@@ -87,7 +87,7 @@
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
 
-<img src="images/slider/{{ $slider->image }}" class="h-12 w-12 bg-white rounded-full border" alt="">
+<img src="images/slider/{{ $slider->image }}" class="h-12 w-12 bg-white " alt="">
                       </td>
 
                       <td
