@@ -7,46 +7,37 @@
                 {{ $titles[0]->main_title }} <span class="text-himara"> {{ $titles[0]->color_title }}</span>
             </h4>
             <p class="section-subtitle">
-              High quality accommodation services
+          {{$about{0}->sub_title}}
             </p>
           </div>
           <div class="info-branding">
             <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-              Necessitatibus deleniti nulla, hic voluptatibus eum voluptatum
-              libero suscipit nemo voluptates cupiditate, ipsum provident
-              facere modi tempora ducimus enim dicta laborum esse aliquam
-              rem assumenda dolores. Commodi, aperiam, blanditiis! Ipsum
-              iure necessitatibus eaque, fuga. Excepturi facilis libero
-              dicta soluta officiis, sint sit voluptatem, vero doloribus
-              nesciunt suscipit dolores veritatis minus quam atque non autem
-              quasi consequatur quae sequi ex, ipsa facere qui ut
-              recusandae. Quod earum cupiditate quaerat assumenda.
+         {{$about[0]->body}}
             </p>
             <div class="providers">
               <span>Recommended on:</span>
               <!-- ITEM -->
               <div class="item">
                 <a href="#">
-                  <img src="images/providers/provider-1.png" alt="Image" />
+                  <img src="images/providers/{{ $about[0]->recommended_1 }}" alt="Image" />
                 </a>
               </div>
               <!-- ITEM -->
               <div class="item">
                 <a href="#">
-                  <img src="images/providers/provider-2.png" alt="Image" />
+                  <img src="images/providers/{{ $about[0]->recommended_2 }}" alt="Image" />
                 </a>
               </div>
               <!-- ITEM -->
               <div class="item">
                 <a href="#">
-                  <img src="images/providers/provider-3.png" alt="Image" />
+                  <img src="images/providers/{{ $about[0]->recommended_3 }}" alt="Image" />
                 </a>
               </div>
               <!-- ITEM -->
               <div class="item">
                 <a href="#">
-                  <img src="images/providers/provider-4.png" alt="Image" />
+                  <img src="images/providers/{{ $about[0]->recommended_4 }}" alt="Image" />
                 </a>
               </div>
             </div>
@@ -68,10 +59,9 @@
                   <i class="fa fa-star" aria-hidden="true"></i>
                   <i class="fa fa-star" aria-hidden="true"></i>
                 </div>
-                <h5 class="title">LUXURY HOTEL</h5>
+                <h5 class="title">{{ $about[0]->card_title }}</h5>
                 <p class="mt20">
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                  Ad dolorem iste suscipit voluptates architecto nemo.
+               {{$about[0]->card_body}}
                 </p>
               </div>
             </div>

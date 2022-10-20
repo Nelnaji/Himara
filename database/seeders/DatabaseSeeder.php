@@ -24,6 +24,8 @@ class DatabaseSeeder extends Seeder
         $this->call(HousekeeperSeeder::class);
         $this->call(GallerySeeder::class);
         $this->call(TopbarSeeder::class);
+        $this->call(AboutSeeder::class);
+
 
 
 

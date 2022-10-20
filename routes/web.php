@@ -86,10 +86,8 @@ Route::group(['middleware'=>['auth','verified']], function(){
         Route::resource('/testimonial', TestimonialController::class);
         Route::resource('/footer', FooterController::class);
         Route::resource('/title', TitleController::class);
+
     });
-
-
-
 });
 
 require __DIR__.'/auth.php';

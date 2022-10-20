@@ -2,11 +2,12 @@
 
 namespace App\Providers;
 
-use App\Models\Gallery;
 use App\Models\Nav;
+use App\Models\Team;
+use App\Models\About;
 use App\Models\Title;
 use App\Models\Slider;
-use App\Models\Team;
+use App\Models\Gallery;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -86,10 +87,14 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('pages.gallery', function($view) {
             $view->with('items', Gallery::all());
         });
-        
+
         // Sending data to gallery limit it to 5 only
         view()->composer('components.index.gallery', function($view) {
         $view->with('items', Gallery::all());
-});
+        });
+
+        view()->composer('components.index.about', function($view) {
+        $view->with('about', About::all());
+        });
     }
 }

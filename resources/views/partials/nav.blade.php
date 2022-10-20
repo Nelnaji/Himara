@@ -32,20 +32,24 @@
 
             @endforeach
 
-          <li class="menu-item dropdown">
-            <a href="#">ELEMENTS</a>
-            <ul class="submenu">
-              <li class="menu-item">
-                <a href="style-guide.html">Style Guide</a>
-              </li>
-              <li class="menu-item">
-                <a href="buttons.html">Buttons</a>
-              </li>
-              <li class="menu-item">
-                <a href="icons.html">Icons</a>
-              </li>
-            </ul>
-          </li>
+            @if (auth()->check() && auth()->user()->is_admin == 1)
+
+            <li class="menu-item dropdown">
+                <a href="#">ELEMENTS</a>
+                <ul class="submenu">
+                    <li class="menu-item">
+                        <a href="{style-guide.html}">Style Guide</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="buttons.html">Buttons</a>
+                    </li>
+                    <li class="menu-item">
+                        <a href="icons.html">Icons</a>
+                    </li>
+                </ul>
+            </li>
+
+            @endif
           <li class="menu-item menu-btn dropdown">
 
 

@@ -95,6 +95,11 @@
               />
             </div>
           </form>
+
+@if (auth()->user()->is_admin || auth()->user()->is_moderator)
+
+
+
           <!-- Divider -->
           <hr class="my-4 md:min-w-full" />
           <!-- Heading -->
@@ -234,8 +239,24 @@
                   title
                 </a>
               </li>
-          </ul>
+              @elseif (auth()->user()->is_editor)
 
+              <h6
+              class="md:min-w-full text-blueGray-500 text-xs uppercase font-bold block pt-1 pb-4 no-underline"
+            >
+              Editor Panel
+            </h6>
+              <li class="items-center">
+                <a
+                  href="{{ route('room.index') }}"
+                  class="text-xs uppercase py-3 font-bold block text-blueGray-700 hover:text-currentGold {{ Route::currentRouteNamed('room.index') ? 'text-currentGold' : '' }}"
+                >
+                  <i class="fas fa-solid fa-city mr-2 text-sm text-blueGray-300"></i>
+                  Rooms
+                </a>
+              </li>
+            </ul>
+            @endif
 
 
           <!-- Divider -->

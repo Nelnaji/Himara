@@ -13,5 +13,6 @@
                 </div>
             </div>
         </div>
+        <p>lorem500</p>
     </div>
 </x-app-layout>

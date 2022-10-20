@@ -17,8 +17,13 @@ return new class extends Migration
             $table->id();
             $table->string('sub_title');
             $table->text('body');
-            $table->string('recommended');
-            $table->string('main_img');
+            $table->string('recommended_1');
+            $table->string('recommended_2');
+            $table->string('recommended_3');
+            $table->string('recommended_4');
+            $table->string('card_bg_img');
+            $table->string('card_title');
+            $table->string('card_body');
             $table->timestamps();
         });
     }
