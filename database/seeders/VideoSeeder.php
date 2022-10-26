@@ -2,8 +2,9 @@
 
 namespace Database\Seeders;
 
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Video;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class VideoSeeder extends Seeder
 {
@@ -14,6 +15,9 @@ class VideoSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Video::create([
+            'image' => 'video.jpg',
+            'url' => 'https://www.youtube.com/watch?v=BDDfopejpwk',
+        ]);
     }
 }

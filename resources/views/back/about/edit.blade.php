@@ -38,13 +38,13 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                               htmlFor="grid-password"
                             >
-                              name
+                              Sub title
                             </label>
                             <input
                               type="text"
                               class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
                               name="name"
-                              value="{{ $about->name }}"
+                              value="{{ $about->sub_title}}"
                             />
                           </div>
                         </div>
@@ -54,13 +54,22 @@
                               class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
 
                             >
-                              Href
+                              Body
                             </label>
-                         
+                            <input
+                            type="text"
+                            class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
+                            name="name"
+                            value="{{ $about->body }}"
+                          />
                           </div>
                         </div>
 
                       </div>
+
+                      <img src="/images/{{ $about->card_bg_img }}" class="h-48 py-2" alt="">
+
+                      <input type="file" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150" name="image" />
 
 
 <button type="submit" class="inline-flex items-center px-4 py-2 bg-currentGold border border-transparent rounded-ls font-semibold text-xs text-white uppercase tracking-widest hover:bg-hoverGold active:bg-hoverGold focus:outline-none focus:border-hoverGold focus:ring ring-gray-300 disabled:opacity-25 transition ease-in-out duration-150">save</button>

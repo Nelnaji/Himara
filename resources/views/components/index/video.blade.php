@@ -1,7 +1,7 @@
       <!-- ========== VIDEO ========== -->
       <section
         class="video np parallax gradient-overlay op6"
-        data-src="images/video.jpg"
+        data-src="images/{{ $video[0]->image }}"
         data-parallax="scroll"
         data-speed="0.3"
         data-mirror-selector=".wrapper"
@@ -12,7 +12,7 @@
             <div class="video-popup">
               <a
                 class="popup-vimeo"
-                href="https://www.youtube.com/watch?v=BDDfopejpwk"
+                href="{{ $video[0]->url }}"
               >
                 <i class="fa fa-play"></i>
               </a>
