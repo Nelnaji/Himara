@@ -23,9 +23,10 @@
 
 
                 <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
-                <form method="POST" action="{{ route('slider.update', $slider) }}">
+                <form method="POST" action="{{ route('slider.update', $slider) }}" enctype="multipart/form-data">
                         @csrf
                         @method('PUT')
+
                       <h6
                         class="text-blueGray-400 text-sm mt-3 mb-6 font-bold uppercase"
                       >
@@ -105,7 +106,7 @@
 
                             <img src="/images/slider/{{ $slider->image }}" class="h-48 py-2" alt="">
 
-                    <input type="file" class="form-control" name="image" />
+                    <input type="file" class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150" name="image" />
 
 
                           </div>
