@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        about links
+        about section
       </h3>
     </div>
   </div>
@@ -34,13 +34,19 @@
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        Name
+                        Sub title
                       </th>
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        href
+                        body
                       </th>
+
+                      <th
+                      class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
+                    >
+                     background
+                    </th>
 
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
@@ -61,15 +67,22 @@
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                       {{$about->name}}
+                       {{$about->sub_title}}
                       </td>
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                        <i class="fas fa-circle text-orange-500 mr-2"></i>
+
+                      {{-- prend 39 lettres et les affichents avec en plus ... --}}
+                      {{substr($about->body, 0, 39 ) . '...'}}
 
                       </td>
+                      <td
+                      class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
+                    >
 
+<img src="images/{{ $about->card_bg_img }}" class="h-12 w-12 bg-white " alt="">
+                    </td>
                       <td
                         class="relative border-t-0 px-6border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
                       >

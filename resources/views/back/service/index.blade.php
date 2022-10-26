@@ -67,7 +67,7 @@
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
                         <i class="fas fa-circle text-orange-500 mr-2"></i>
-                       }
+
                       </td>
 
                       <td
@@ -121,6 +121,6 @@
     </div>
 
 
- 
+
 </section>
 @endsection
