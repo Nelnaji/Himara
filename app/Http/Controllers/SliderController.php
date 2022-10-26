@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Slider;
-use Illuminate\Support\Facades\Storage;
 use App\Http\Requests\StoreSliderRequest;
 use App\Http\Requests\UpdateSliderRequest;
 
@@ -55,7 +54,7 @@ class SliderController extends Controller
             'sub_title' => $request->input('sub_title'),
             'button1' => $request->input('button1'),
             'button2' => $request->input('button2'),
-            'image'=> $request->image
+            'image' => $this->storeImage($request),
 
         ]);
 
@@ -95,17 +94,15 @@ class SliderController extends Controller
      */
     public function update(UpdateSliderRequest $request, Slider $slider)
     {
-       $test =  Storage::disk('public')->put('images/slider', $request->image);
-dd(Storage::get($test));
-             $slider->update([
+        $slider->update([
             'main_title'=> $request->main_title,
             'sub_title'=> $request->sub_title,
             'star_title'=> $request->star_title,
             'button1'=> $request->button1,
             'button2'=> $request->button2,
-
-
+            'image'=> $request->image
         ]);
+
 
     return redirect()->route('slider.index');
     }
@@ -122,5 +119,8 @@ dd(Storage::get($test));
         return redirect()->route('slider.index');
     }
 
-
+    private function storeImage($request) {
+        $newImageName = uniqid() . '-' . $request->image . '.' . $request->image->extension();
+        return $request->image->move(public_path('images/slider/'), $newImageName);
+    }
 }
