@@ -6,6 +6,7 @@ use App\Models\Nav;
 use App\Models\Team;
 use App\Models\About;
 use App\Models\Title;
+use App\Models\Video;
 use App\Models\Slider;
 use App\Models\Gallery;
 use Illuminate\Support\ServiceProvider;
@@ -106,6 +107,18 @@ class AppServiceProvider extends ServiceProvider
         view()->composer('components.index.about', function($view) {
         $view->with('about', About::all());
         });
+<<<<<<< HEAD
     
+=======
+
+
+        // Sending data to videos.
+
+        view()->composer('components.index.video', function($view) {
+            $view->with('video', Video::all());
+            });
+
+
+>>>>>>> cfad09f8686beea90fba1c3390ac8ac83476f502
     }
 }

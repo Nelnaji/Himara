@@ -5,7 +5,7 @@
       class="relative w-full px-4 max-w-full flex-grow flex-1"
     >
       <h3 class="font-semibold text-lg text-blueGray-700">
-        video links
+        video
       </h3>
     </div>
   </div>
@@ -34,12 +34,12 @@
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        Name
+                        Video url
                       </th>
                       <th
                         class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left bg-blueGray-50 text-blueGray-500 border-blueGray-100"
                       >
-                        href
+                        Video backgroud image
                       </th>
 
                       <th
@@ -61,13 +61,12 @@
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                       {{$video->name}}
+                      {{ $video->url }}
                       </td>
                       <td
                         class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
                       >
-                        <i class="fas fa-circle text-orange-500 mr-2"></i>
-
+                        <img src="images/{{ $video->image }}" class="h-12 w-12 bg-white " alt="">
                       </td>
 
                       <td

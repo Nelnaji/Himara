@@ -25,6 +25,8 @@ class DatabaseSeeder extends Seeder
         $this->call(GallerySeeder::class);
         $this->call(TopbarSeeder::class);
         $this->call(AboutSeeder::class);
+        $this->call(VideoSeeder::class);
+
 
 
 
