@@ -43,6 +43,10 @@ class GalleryController extends Controller
 
         ]);
 
+
+
+
+
     return redirect()->route('gallery.index');
     }
 
@@ -77,10 +81,17 @@ class GalleryController extends Controller
      */
     public function update(UpdateGalleryRequest $request, Gallery $gallery)
     {
+
+        $apth = "images/sliders/"
         $gallery->update([
             'name'=> $request->name,
 
+
         ]);
+
+
+
+
 
     return redirect()->route('gallery.index');
     }

@@ -92,7 +92,7 @@ class AppServiceProvider extends ServiceProvider
 
         // Sending data to gallery
         view()->composer('pages.gallery', function($view) {
-            $view->with('items', Gallery::all());
+            $view->with('items', Gallery::limit(8)->get());
         });
 
         // Sending data to gallery limit it to 5 only
@@ -100,8 +100,12 @@ class AppServiceProvider extends ServiceProvider
         $view->with('items', Gallery::inRandomOrder()->get());
         });
 
+
+        // sending Data to about component
+
         view()->composer('components.index.about', function($view) {
         $view->with('about', About::all());
         });
+    
     }
 }
